@@ -29,6 +29,7 @@ margin_bottom = 387.0
 text = "Return to Main Menu"
 
 [node name="SettingsButton" type="Button" parent="."]
+visible = false
 margin_left = 909.0
 margin_top = 22.0
 margin_right = 996.0

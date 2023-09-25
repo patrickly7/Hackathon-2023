@@ -23,13 +23,12 @@ margin_bottom = 880.0
 rect_rotation = 90.198
 
 [node name="FrontPage" type="Tabs" parent="TabContainer"]
-visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = 5.0
-margin_top = 5.0
-margin_right = 5.0
-margin_bottom = 5.0
+margin_left = 4.0
+margin_top = 32.0
+margin_right = -4.0
+margin_bottom = -4.0
 
 [node name="FrontPage" type="Sprite" parent="TabContainer/FrontPage"]
 position = Vector2( 138.095, 1152.51 )
@@ -39,6 +38,7 @@ texture = ExtResource( 1 )
 offset = Vector2( 1879.71, 237.448 )
 
 [node name="Index" type="Tabs" parent="TabContainer"]
+visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 5.0
