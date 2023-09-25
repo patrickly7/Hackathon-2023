@@ -31,6 +31,7 @@ margin_bottom = 162.0
 text = "START!"
 
 [node name="FlipCardButton" type="TextureButton" parent="."]
+visible = false
 margin_left = 669.0
 margin_top = 276.0
 margin_right = 733.0
@@ -73,6 +74,7 @@ scale = Vector2( 0.35, 0.35 )
 texture = ExtResource( 11 )
 
 [node name="PauseButton" type="Button" parent="."]
+visible = false
 margin_left = 872.0
 margin_top = 29.0
 margin_right = 998.0
@@ -83,6 +85,7 @@ text = "Pause"
 visible = false
 
 [node name="GuidebookButton" type="Button" parent="."]
+visible = false
 margin_left = 96.0
 margin_top = 393.0
 margin_right = 237.0
@@ -91,6 +94,7 @@ text = "Guidebook"
 
 [node name="Guidebook" parent="." instance=ExtResource( 6 )]
 visible = false
+z_index = 2
 
 [node name="TimerNode" type="Node2D" parent="."]
 visible = false
@@ -106,8 +110,49 @@ margin_bottom = 60.0
 text = "Timer"
 script = ExtResource( 4 )
 
+[node name="CardsRemaining" type="Label" parent="."]
+visible = false
+margin_left = 448.0
+margin_top = 76.0
+margin_right = 578.0
+margin_bottom = 90.0
+text = "Cards Remaining: 20"
+
+[node name="ProcessCardActions" type="Node2D" parent="."]
+visible = false
+
+[node name="ActionsTitle" type="Label" parent="ProcessCardActions"]
+margin_left = 824.0
+margin_top = 314.0
+margin_right = 905.0
+margin_bottom = 328.0
+text = "PROCESSING"
+
+[node name="DiscrepancySelect" type="OptionButton" parent="ProcessCardActions"]
+margin_left = 823.0
+margin_top = 355.0
+margin_right = 911.0
+margin_bottom = 375.0
+text = "OPTIONS"
+
+[node name="ConditionSelect" type="OptionButton" parent="ProcessCardActions"]
+margin_left = 814.0
+margin_top = 393.0
+margin_right = 927.0
+margin_bottom = 413.0
+text = "CONDITIONS"
+
+[node name="SubmitButton" type="Button" parent="ProcessCardActions"]
+margin_left = 837.0
+margin_top = 430.0
+margin_right = 894.0
+margin_bottom = 450.0
+text = "Submit"
+
 [connection signal="pressed" from="FlipCardButton" to="." method="_on_FlipCardButton_pressed"]
 [connection signal="pressed" from="PauseButton" to="." method="_on_PauseButton_pressed"]
 [connection signal="pressed" from="GuidebookButton" to="." method="_on_GuidebookButton_pressed"]
+[connection signal="hide" from="Guidebook" to="." method="_on_Guidebook_hide"]
 [connection signal="timeout" from="TimerNode/Timer" to="." method="_on_Timer_timeout"]
 [connection signal="timeout" from="TimerNode/Timer" to="TimerNode/TimerLabel" method="toggle_visibility"]
+[connection signal="pressed" from="ProcessCardActions/SubmitButton" to="." method="_on_SubmitButton_pressed"]

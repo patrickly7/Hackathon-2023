@@ -6,11 +6,6 @@
 [node name="Guidebook" type="Node2D"]
 script = ExtResource( 2 )
 
-[node name="Label" type="Label" parent="."]
-margin_right = 40.0
-margin_bottom = 14.0
-text = "Guidebook"
-
 [node name="CloseButton" type="Button" parent="."]
 margin_left = 892.0
 margin_top = 31.0
