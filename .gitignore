@@ -13,3 +13,7 @@ export_presets.cfg
 .mono/
 data_*/
 mono_crash.*.json
+
+# Ignore HTML exports
+HTML/
+Hackathon-2023-HTML.zip
