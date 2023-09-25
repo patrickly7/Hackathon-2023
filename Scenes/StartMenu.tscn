@@ -20,5 +20,20 @@ margin_bottom = 472.0
 hint_tooltip = "Quit"
 text = "Quit"
 
+[node name="SettingsButton" type="Button" parent="."]
+margin_left = 914.0
+margin_top = 26.0
+margin_right = 996.0
+margin_bottom = 88.0
+text = "Settings"
+
+[node name="Title" type="RichTextLabel" parent="."]
+margin_left = 458.0
+margin_top = 141.0
+margin_right = 499.0
+margin_bottom = 157.0
+text = "AC/PC"
+
 [connection signal="pressed" from="PlayButton" to="." method="_on_PlayButton_pressed"]
 [connection signal="pressed" from="QuitButton" to="." method="_on_QuitButton_pressed"]
+[connection signal="pressed" from="SettingsButton" to="." method="_on_SettingsButton_pressed"]
