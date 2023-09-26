@@ -1,6 +1,7 @@
 extends Node2D
 
 func _on_ResumeButton_pressed():
+	print('resume')
 	hide()
 	get_tree().paused = false
 

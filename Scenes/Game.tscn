@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=2]
+[gd_scene load_steps=31 format=2]
 
 [ext_resource path="res://icon.png" type="Texture" id=1]
 [ext_resource path="res://Images/Card/CardFront.png" type="Texture" id=2]
@@ -19,12 +19,14 @@
 [ext_resource path="res://Images/Discrep/Scratch_N_S.png" type="Texture" id=17]
 [ext_resource path="res://Images/Discrep/Smudge_Fingerprint.png" type="Texture" id=18]
 [ext_resource path="res://Images/Discrep/Scribble_Jon.png" type="Texture" id=19]
+[ext_resource path="res://Images/Background/Main.png" type="Texture" id=20]
 [ext_resource path="res://Images/Discrep/Bend_SW.png" type="Texture" id=21]
 [ext_resource path="res://Images/Discrep/EdgeWear_Top.png" type="Texture" id=22]
 [ext_resource path="res://Images/Discrep/EdgeWear_Right.png" type="Texture" id=23]
 [ext_resource path="res://Images/Discrep/EdgeWear_Left.png" type="Texture" id=24]
 [ext_resource path="res://Images/Discrep/Scratch_NW_SE.png" type="Texture" id=25]
 [ext_resource path="res://Images/Discrep/EdgeWear_Bottom.png" type="Texture" id=26]
+[ext_resource path="res://Images/Background/Guidebook.png" type="Texture" id=27]
 [ext_resource path="res://Images/Discrep/Bend_SE.png" type="Texture" id=28]
 [ext_resource path="res://Images/Discrep/Scratch_SW_NE.png" type="Texture" id=30]
 
@@ -34,6 +36,12 @@ font_data = ExtResource( 15 )
 
 [node name="Game" type="Node2D"]
 script = ExtResource( 3 )
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="Main" type="Sprite" parent="ParallaxBackground"]
+position = Vector2( 960, 540 )
+texture = ExtResource( 20 )
 
 [node name="GetReadyText" type="Label" parent="."]
 margin_left = 786.0
@@ -54,10 +62,10 @@ text = "START!"
 
 [node name="FlipCardButton" type="TextureButton" parent="."]
 visible = false
-margin_left = 1228.0
-margin_top = 502.0
-margin_right = 1292.0
-margin_bottom = 566.0
+margin_left = 1193.0
+margin_top = 480.0
+margin_right = 1257.0
+margin_bottom = 544.0
 texture_normal = ExtResource( 1 )
 
 [node name="Node2D" type="Node2D" parent="."]
@@ -114,12 +122,14 @@ texture = ExtResource( 19 )
 visible = false
 position = Vector2( -350, 423 )
 scale = Vector2( 1.66667, 1.66667 )
+z_index = 1
 texture = ExtResource( 21 )
 
 [node name="BendSe" type="Sprite" parent="Node2D/CurrentCardFront"]
 visible = false
 position = Vector2( 288, 423 )
 scale = Vector2( 1.66667, 1.66667 )
+z_index = 1
 texture = ExtResource( 28 )
 
 [node name="EdgeWearTop" type="Sprite" parent="Node2D/CurrentCardFront"]
@@ -187,14 +197,12 @@ text = "Pause"
 visible = false
 z_index = 3
 
-[node name="GuidebookButton" type="Button" parent="."]
-visible = false
-margin_left = 140.0
-margin_top = 636.0
-margin_right = 512.0
-margin_bottom = 836.0
-custom_fonts/font = ExtResource( 13 )
-text = "Guidebook"
+[node name="GuidebookButton" type="TextureButton" parent="."]
+margin_left = 57.0
+margin_top = 466.0
+margin_right = 698.0
+margin_bottom = 882.0
+texture_normal = ExtResource( 27 )
 
 [node name="Guidebook" parent="." instance=ExtResource( 6 )]
 visible = false
@@ -207,10 +215,10 @@ visible = false
 wait_time = 181.0
 
 [node name="TimerLabel" type="Label" parent="TimerNode"]
-margin_left = 22.0
-margin_top = 46.0
-margin_right = 62.0
-margin_bottom = 60.0
+margin_left = 42.0
+margin_top = 36.0
+margin_right = 217.0
+margin_bottom = 101.0
 custom_fonts/font = ExtResource( 13 )
 text = "Timer"
 script = ExtResource( 4 )
@@ -225,37 +233,36 @@ custom_fonts/font = SubResource( 1 )
 text = "Cards Remaining: 20"
 
 [node name="ProcessCardActions" type="Node2D" parent="."]
-visible = false
 
 [node name="ActionsTitle" type="Label" parent="ProcessCardActions"]
-margin_left = 1432.0
-margin_top = 622.0
-margin_right = 1612.0
-margin_bottom = 655.0
-custom_fonts/font = ExtResource( 14 )
+margin_left = 1377.0
+margin_top = 599.0
+margin_right = 1727.0
+margin_bottom = 664.0
+custom_fonts/font = ExtResource( 13 )
 text = "PROCESSING"
 
 [node name="DiscrepancySelect" type="OptionButton" parent="ProcessCardActions"]
-margin_left = 1446.0
-margin_top = 676.0
-margin_right = 1601.0
-margin_bottom = 715.0
+margin_left = 1354.0
+margin_top = 679.0
+margin_right = 1561.0
+margin_bottom = 718.0
 custom_fonts/font = ExtResource( 14 )
 text = "OPTIONS"
 
 [node name="ConditionSelect" type="OptionButton" parent="ProcessCardActions"]
-margin_left = 1419.0
-margin_top = 734.0
-margin_right = 1628.0
-margin_bottom = 773.0
+margin_left = 1354.0
+margin_top = 739.0
+margin_right = 1563.0
+margin_bottom = 778.0
 custom_fonts/font = ExtResource( 14 )
 text = "CONDITIONS"
 
 [node name="SubmitButton" type="Button" parent="ProcessCardActions"]
-margin_left = 1450.0
-margin_top = 804.0
-margin_right = 1588.0
-margin_bottom = 851.0
+margin_left = 1476.0
+margin_top = 808.0
+margin_right = 1614.0
+margin_bottom = 855.0
 custom_fonts/font = ExtResource( 14 )
 text = "Submit"
 

@@ -104,11 +104,6 @@ func _ready():
 	generateCard()
 	flipCard()
 
-func _on_PauseButton_pressed():
-	get_tree().paused = true
-	$PauseMenu.show()
-	$PauseButton.hide()
-
 func _on_GuidebookButton_pressed():
 	hideControls()
 	$Guidebook.show()
@@ -188,17 +183,16 @@ func generateCardImperfections():
 	var numBends = rng.randi_range(0, 2) # 0 - 2 bends
 	
 	var totalImperfections = numScratches + numSmudges + numWears + numBends
-	match totalImperfections:
-		[0, 1, 2]:
-			currentCorrectCondition = "Near Mint"
-		[3, 4]:
-			currentCorrectCondition = "Lightly Played"
-		[5, 6]:
-			currentCorrectCondition = "Moderately Played"
-		[7, 8]:
-			currentCorrectCondition = "Heavily Played"
-		_:
-			currentCorrectCondition = "Damaged"
+	if (totalImperfections <= 2):
+		currentCorrectCondition = "Near Mint"
+	elif (totalImperfections <= 4):
+		currentCorrectCondition = "Lightly Played"
+	elif (totalImperfections <= 6):
+		currentCorrectCondition = "Moderately Played"
+	elif (totalImperfections <= 8):
+		currentCorrectCondition = "Heavily Played"
+	else:
+		currentCorrectCondition = "Damaged"
 	
 	### Imperfections ###
 	match numSmudges:
@@ -289,8 +283,7 @@ func generateCardImperfections():
 	else:
 		$Node2D/CurrentCardBack.texture = load(cardBack)
 		
-	
-	print(totalImperfections, currentCorrectCondition)
+	print(currentCorrectDiscrepancyType, currentCorrectCondition)
 
 func endGame():
 	Global.timeRemaining = floor($TimerNode/Timer.time_left)
@@ -325,16 +318,12 @@ func determineSuccessfulProcessing():
 	
 	Global.cardsSuccessfullyProcessed += 1
 
+func _on_PauseButton_pressed():
+	get_tree().paused = true
+	$PauseMenu.show()
+	$PauseButton.hide()
+	$ProcessCardActions.hide()
+
 func _on_PauseMenu_hide():
 	$PauseButton.show()
-
-
-#omit dirt
-#
-#scratches anywhere
-#scribbles anywhere
-#hole anywhere
-#smudge anywhere
-#miscut just replace back texture
-#edgewear in specific spots
-#bend in specific spots 
+	$ProcessCardActions.show()
