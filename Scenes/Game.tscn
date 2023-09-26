@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=29 format=2]
 
 [ext_resource path="res://icon.png" type="Texture" id=1]
 [ext_resource path="res://Images/Card/CardFront.png" type="Texture" id=2]
@@ -15,6 +15,18 @@
 [ext_resource path="res://Assets/Fonts/arcade_64.tres" type="DynamicFont" id=13]
 [ext_resource path="res://Assets/Fonts/arcade_32.tres" type="DynamicFont" id=14]
 [ext_resource path="res://Assets/Fonts/joystix monospace.otf" type="DynamicFontData" id=15]
+[ext_resource path="res://Images/Discrep/Damage_HolePunch.png" type="Texture" id=16]
+[ext_resource path="res://Images/Discrep/Scratch_N_S.png" type="Texture" id=17]
+[ext_resource path="res://Images/Discrep/Smudge_Fingerprint.png" type="Texture" id=18]
+[ext_resource path="res://Images/Discrep/Scribble_Jon.png" type="Texture" id=19]
+[ext_resource path="res://Images/Discrep/Bend_SW.png" type="Texture" id=21]
+[ext_resource path="res://Images/Discrep/EdgeWear_Top.png" type="Texture" id=22]
+[ext_resource path="res://Images/Discrep/EdgeWear_Right.png" type="Texture" id=23]
+[ext_resource path="res://Images/Discrep/EdgeWear_Left.png" type="Texture" id=24]
+[ext_resource path="res://Images/Discrep/Scratch_NW_SE.png" type="Texture" id=25]
+[ext_resource path="res://Images/Discrep/EdgeWear_Bottom.png" type="Texture" id=26]
+[ext_resource path="res://Images/Discrep/Bend_SE.png" type="Texture" id=28]
+[ext_resource path="res://Images/Discrep/Scratch_SW_NE.png" type="Texture" id=30]
 
 [sub_resource type="DynamicFont" id=1]
 size = 32
@@ -86,6 +98,77 @@ position = Vector2( -31.7454, -142.917 )
 scale = Vector2( 0.38, 0.38 )
 texture = ExtResource( 12 )
 
+[node name="Damage" type="Sprite" parent="Node2D/CurrentCardFront"]
+visible = false
+position = Vector2( -280, 336.667 )
+scale = Vector2( 1.66667, 1.66667 )
+texture = ExtResource( 16 )
+
+[node name="Scribble" type="Sprite" parent="Node2D/CurrentCardFront"]
+visible = false
+position = Vector2( 83.3333, 113.333 )
+scale = Vector2( 1.16667, 1.16667 )
+texture = ExtResource( 19 )
+
+[node name="BendSw" type="Sprite" parent="Node2D/CurrentCardFront"]
+visible = false
+position = Vector2( -350, 423 )
+scale = Vector2( 1.66667, 1.66667 )
+texture = ExtResource( 21 )
+
+[node name="BendSe" type="Sprite" parent="Node2D/CurrentCardFront"]
+visible = false
+position = Vector2( 288, 423 )
+scale = Vector2( 1.66667, 1.66667 )
+texture = ExtResource( 28 )
+
+[node name="EdgeWearTop" type="Sprite" parent="Node2D/CurrentCardFront"]
+visible = false
+position = Vector2( -39.9999, -465 )
+scale = Vector2( 3, 1.6 )
+texture = ExtResource( 22 )
+
+[node name="EdgeWearBottom" type="Sprite" parent="Node2D/CurrentCardFront"]
+visible = false
+position = Vector2( -40, 473 )
+scale = Vector2( 3, 1.6 )
+texture = ExtResource( 26 )
+
+[node name="EdgeWearRight" type="Sprite" parent="Node2D/CurrentCardFront"]
+visible = false
+position = Vector2( 330, -5 )
+scale = Vector2( 1.6, 3.7 )
+texture = ExtResource( 23 )
+
+[node name="EdgeWearLeft" type="Sprite" parent="Node2D/CurrentCardFront"]
+visible = false
+position = Vector2( -395, -5 )
+scale = Vector2( 1.6, 3.7 )
+texture = ExtResource( 24 )
+
+[node name="ScratchNS" type="Sprite" parent="Node2D/CurrentCardFront"]
+visible = false
+position = Vector2( 160, 195 )
+scale = Vector2( 1.66667, 1.66667 )
+texture = ExtResource( 17 )
+
+[node name="ScratchNwSe" type="Sprite" parent="Node2D/CurrentCardFront"]
+visible = false
+position = Vector2( -220, 96.6667 )
+scale = Vector2( 0.88262, 2.37689 )
+texture = ExtResource( 25 )
+
+[node name="ScratchSwNe" type="Sprite" parent="Node2D/CurrentCardFront"]
+visible = false
+position = Vector2( 15, -145 )
+scale = Vector2( 1.66667, 1.66667 )
+texture = ExtResource( 30 )
+
+[node name="SmudgeFingerprint" type="Sprite" parent="Node2D/CurrentCardFront"]
+visible = false
+position = Vector2( 108.333, -290 )
+texture = ExtResource( 18 )
+
 [node name="CurrentCardBack" type="Sprite" parent="Node2D"]
 position = Vector2( 960, 760 )
 scale = Vector2( 0.6, 0.6 )
@@ -128,6 +211,7 @@ margin_left = 22.0
 margin_top = 46.0
 margin_right = 62.0
 margin_bottom = 60.0
+custom_fonts/font = ExtResource( 13 )
 text = "Timer"
 script = ExtResource( 4 )
 
