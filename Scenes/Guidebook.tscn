@@ -1,28 +1,49 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=24 format=2]
 
-[ext_resource path="res://Images/Greybox/FrontPage.png" type="Texture" id=1]
+[ext_resource path="res://Images/Guidebook/Blank Pages.png" type="Texture" id=1]
 [ext_resource path="res://Scripts/Guidebook.gd" type="Script" id=2]
-[ext_resource path="res://Images/Greybox/IndexPage.png" type="Texture" id=3]
-[ext_resource path="res://Images/Greybox/EmptyPage.png" type="Texture" id=4]
+[ext_resource path="res://Images/Guidebook/FrontPage.png" type="Texture" id=3]
+[ext_resource path="res://Assets/Fonts/arcade_32.tres" type="DynamicFont" id=4]
+[ext_resource path="res://Assets/Fonts/joystix_32.tres" type="DynamicFont" id=5]
+[ext_resource path="res://Images/Text/BlurbText.png" type="Texture" id=6]
+[ext_resource path="res://Images/Discrep/Bend_SE.png" type="Texture" id=7]
+[ext_resource path="res://Images/Text/ShortLongText.png" type="Texture" id=8]
+[ext_resource path="res://Assets/Fonts/arcade_64.tres" type="DynamicFont" id=9]
+[ext_resource path="res://Images/CardArt/Bee.png" type="Texture" id=10]
+[ext_resource path="res://Images/Energy/Paper.png" type="Texture" id=11]
+[ext_resource path="res://Images/Card/CardFront.png" type="Texture" id=12]
+[ext_resource path="res://Images/Discrep/EdgeWear_Left.png" type="Texture" id=13]
+[ext_resource path="res://Images/Discrep/Damage_HolePunch.png" type="Texture" id=14]
+[ext_resource path="res://Images/Discrep/Smudge_Fingerprint.png" type="Texture" id=15]
+[ext_resource path="res://Images/Discrep/Miscut.png" type="Texture" id=16]
+[ext_resource path="res://Images/Discrep/Scratch_SW_NE.png" type="Texture" id=17]
+[ext_resource path="res://Images/Discrep/Scratch_NW_SE.png" type="Texture" id=18]
+[ext_resource path="res://Images/Discrep/Scribble_Purple.png" type="Texture" id=19]
+[ext_resource path="res://Images/Discrep/Bend_SW.png" type="Texture" id=20]
+[ext_resource path="res://Images/Discrep/EdgeWear_Right.png" type="Texture" id=21]
+[ext_resource path="res://Images/Discrep/EdgeWear_Bottom.png" type="Texture" id=22]
+[ext_resource path="res://Images/Discrep/Scratch_N_S.png" type="Texture" id=23]
 
 [node name="Guidebook" type="Node2D"]
 script = ExtResource( 2 )
 
 [node name="CloseButton" type="Button" parent="."]
-margin_left = 892.0
-margin_top = 31.0
-margin_right = 993.0
-margin_bottom = 94.0
+margin_left = 906.0
+margin_top = 21.0
+margin_right = 1007.0
+margin_bottom = 84.0
+custom_fonts/font = ExtResource( 9 )
 text = "Close"
 
 [node name="TabContainer" type="TabContainer" parent="."]
-margin_left = 882.0
-margin_top = 79.0
-margin_right = 1390.0
-margin_bottom = 880.0
+margin_left = 1412.0
+margin_top = 461.0
+margin_right = 1923.0
+margin_bottom = 1279.0
 rect_rotation = 90.198
 
-[node name="FrontPage" type="Tabs" parent="TabContainer"]
+[node name="Front Page" type="Tabs" parent="TabContainer"]
+visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 4.0
@@ -30,34 +51,1243 @@ margin_top = 32.0
 margin_right = -4.0
 margin_bottom = -4.0
 
-[node name="FrontPage" type="Sprite" parent="TabContainer/FrontPage"]
-position = Vector2( 138.095, 1152.51 )
-rotation = -1.57699
-scale = Vector2( 0.507596, 0.507796 )
-texture = ExtResource( 1 )
-offset = Vector2( 1879.71, 237.448 )
+[node name="FrontPage" type="Sprite" parent="TabContainer/Front Page"]
+position = Vector2( 250.457, 208.372 )
+rotation = -1.57425
+scale = Vector2( 0.490458, 0.492549 )
+texture = ExtResource( 3 )
+
+[node name="Guidebook Title" type="Label" parent="TabContainer/Front Page"]
+margin_left = 102.427
+margin_top = 380.635
+margin_right = 470.427
+margin_bottom = 649.635
+rect_rotation = -90.3604
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 9 )
+text = "Guidebook !
+
+How     To
+Condition"
+align = 1
 
 [node name="Index" type="Tabs" parent="TabContainer"]
 visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = 5.0
-margin_top = 5.0
-margin_right = 5.0
-margin_bottom = 5.0
+margin_left = 4.0
+margin_top = 32.0
+margin_right = -4.0
+margin_bottom = -4.0
 
-[node name="EmptyPage" type="Sprite" parent="TabContainer/Index"]
-position = Vector2( 6.8266, 782.532 )
-rotation = -1.57131
-scale = Vector2( 0.489781, 0.502786 )
-texture = ExtResource( 4 )
-centered = false
+[node name="BlankPages" type="Sprite" parent="TabContainer/Index"]
+position = Vector2( 251.851, 389.73 )
+rotation = -1.57292
+scale = Vector2( 0.491918, 0.505755 )
+texture = ExtResource( 1 )
 
-[node name="IndexPage" type="Sprite" parent="TabContainer/Index"]
-position = Vector2( 6.40332, 407.955 )
-rotation = -1.57131
-scale = Vector2( 0.498229, 0.50206 )
-texture = ExtResource( 3 )
-centered = false
+[node name="Index Text" type="Label" parent="TabContainer/Index"]
+margin_left = 16.1092
+margin_top = 288.932
+margin_right = 191.109
+margin_bottom = 353.932
+rect_rotation = -89.9229
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 9 )
+text = "Index"
+
+[node name="Goal" type="Tabs" parent="TabContainer"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 32.0
+margin_right = -4.0
+margin_bottom = -4.0
+
+[node name="BlankPages" type="Sprite" parent="TabContainer/Goal"]
+position = Vector2( 251.851, 389.73 )
+rotation = -1.57292
+scale = Vector2( 0.491918, 0.505755 )
+texture = ExtResource( 1 )
+
+[node name="GoalText" type="Label" parent="TabContainer/Goal"]
+margin_left = 17.0
+margin_top = 380.0
+margin_right = 376.0
+margin_bottom = 445.0
+rect_rotation = -89.7973
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 9 )
+text = "Goal"
+align = 1
+
+[node name="GoalExaplanationText" type="Label" parent="TabContainer/Goal"]
+margin_left = 104.0
+margin_top = 377.0
+margin_right = 461.0
+margin_bottom = 442.0
+rect_rotation = -89.7973
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 4 )
+text = "Correctly    Identify 
+the    card
+IMPERFECTIONS
+and
+Condition
+based    on    our
+standards "
+align = 1
+
+[node name="Bend" type="Tabs" parent="TabContainer"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 32.0
+margin_right = -4.0
+margin_bottom = -4.0
+
+[node name="BlankPages" type="Sprite" parent="TabContainer/Bend"]
+position = Vector2( 251.851, 389.73 )
+rotation = -1.57292
+scale = Vector2( 0.491918, 0.505755 )
+texture = ExtResource( 1 )
+
+[node name="ImperfectionsText" type="Label" parent="TabContainer/Bend"]
+margin_left = 25.7298
+margin_top = 757.902
+margin_right = 384.73
+margin_bottom = 822.902
+rect_rotation = -89.7973
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 5 )
+text = "Imperfections"
+align = 1
+
+[node name="ImperfectionsExplanationText" type="Label" parent="TabContainer/Bend"]
+margin_left = 107.0
+margin_top = 756.0
+margin_right = 465.0
+margin_bottom = 1005.0
+rect_rotation = -89.7973
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 4 )
+text = "The     condition     of     a
+ card     is     determined 
+by     the     number     of 
+IMPERFECTIONS
+ that    a    card    contains"
+align = 1
+
+[node name="BendText" type="Label" parent="TabContainer/Bend"]
+margin_left = 17.0
+margin_top = 380.0
+margin_right = 376.0
+margin_bottom = 445.0
+rect_rotation = -89.7973
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 9 )
+text = "Bend"
+align = 1
+
+[node name="BendExaplanationText" type="Label" parent="TabContainer/Bend"]
+margin_left = 73.4129
+margin_top = 376.735
+margin_right = 430.413
+margin_bottom = 445.735
+rect_rotation = -89.7973
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 4 )
+text = "A     line     or    ridge
+from     bending     a     card"
+align = 1
+
+[node name="CardFront" type="Sprite" parent="TabContainer/Bend"]
+position = Vector2( 315.108, 193.515 )
+rotation = -1.57152
+scale = Vector2( 0.287513, 0.335155 )
+texture = ExtResource( 12 )
+
+[node name="Bee" type="Sprite" parent="TabContainer/Bend/CardFront"]
+position = Vector2( -34.2803, -152.901 )
+scale = Vector2( 0.326496, 0.362899 )
+texture = ExtResource( 10 )
+
+[node name="BendSe" type="Sprite" parent="TabContainer/Bend/CardFront"]
+position = Vector2( 303.238, 445.356 )
+scale = Vector2( 1.24457, 1.03226 )
+texture = ExtResource( 7 )
+
+[node name="Paper" type="Sprite" parent="TabContainer/Bend/CardFront"]
+position = Vector2( 259.928, -419.303 )
+rotation = -0.00234512
+scale = Vector2( 0.0742717, 0.0718298 )
+texture = ExtResource( 11 )
+
+[node name="BlurbText" type="Sprite" parent="TabContainer/Bend/CardFront"]
+position = Vector2( -37.1919, 207.973 )
+rotation = -0.00234512
+scale = Vector2( 1.98883, 2.55746 )
+texture = ExtResource( 6 )
+
+[node name="ShortLongText" type="Sprite" parent="TabContainer/Bend/CardFront"]
+position = Vector2( -122.74, -417.914 )
+rotation = -0.00234512
+scale = Vector2( 0.398923, 1.09553 )
+texture = ExtResource( 8 )
+
+[node name="Damage & Edgewear" type="Tabs" parent="TabContainer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 32.0
+margin_right = -4.0
+margin_bottom = -4.0
+
+[node name="BlankPages" type="Sprite" parent="TabContainer/Damage & Edgewear"]
+position = Vector2( 251.851, 389.73 )
+rotation = -1.57292
+scale = Vector2( 0.491918, 0.505755 )
+texture = ExtResource( 1 )
+
+[node name="DamageText" type="Label" parent="TabContainer/Damage & Edgewear"]
+margin_left = 17.7264
+margin_top = 756.93
+margin_right = 376.726
+margin_bottom = 821.93
+rect_rotation = -89.7973
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 9 )
+text = "Damage"
+align = 1
+
+[node name="DamageExplanationText" type="Label" parent="TabContainer/Damage & Edgewear"]
+margin_left = 67.0
+margin_top = 756.0
+margin_right = 425.0
+margin_bottom = 861.0
+rect_rotation = -89.7973
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 4 )
+text = "severe     imperfection
+that    impacts     the
+card     integrity"
+align = 1
+
+[node name="EdgewearText" type="Label" parent="TabContainer/Damage & Edgewear"]
+margin_left = 17.0
+margin_top = 380.0
+margin_right = 376.0
+margin_bottom = 445.0
+rect_rotation = -89.7973
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 9 )
+text = "Edgewear"
+align = 1
+
+[node name="EdgewearExaplanationText" type="Label" parent="TabContainer/Damage & Edgewear"]
+margin_left = 73.4129
+margin_top = 376.735
+margin_right = 430.413
+margin_bottom = 445.735
+rect_rotation = -89.7973
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 4 )
+text = "Loss    of    material
+along    the    edge
+of    the    card"
+align = 1
+
+[node name="CardFront" type="Sprite" parent="TabContainer/Damage & Edgewear"]
+position = Vector2( 325.713, 193.507 )
+rotation = -1.57152
+scale = Vector2( 0.287513, 0.315515 )
+texture = ExtResource( 12 )
+
+[node name="Bee" type="Sprite" parent="TabContainer/Damage & Edgewear/CardFront"]
+position = Vector2( -34.2803, -152.901 )
+scale = Vector2( 0.326496, 0.362899 )
+texture = ExtResource( 10 )
+
+[node name="Paper" type="Sprite" parent="TabContainer/Damage & Edgewear/CardFront"]
+position = Vector2( 259.928, -419.303 )
+rotation = -0.00234512
+scale = Vector2( 0.0742717, 0.0718298 )
+texture = ExtResource( 11 )
+
+[node name="BlurbText" type="Sprite" parent="TabContainer/Damage & Edgewear/CardFront"]
+position = Vector2( -37.1919, 207.973 )
+rotation = -0.00234512
+scale = Vector2( 1.98883, 2.55746 )
+texture = ExtResource( 6 )
+
+[node name="ShortLongText" type="Sprite" parent="TabContainer/Damage & Edgewear/CardFront"]
+position = Vector2( -122.74, -417.914 )
+rotation = -0.00234512
+scale = Vector2( 0.398923, 1.09553 )
+texture = ExtResource( 8 )
+
+[node name="EdgeWearLeft" type="Sprite" parent="TabContainer/Damage & Edgewear/CardFront"]
+position = Vector2( -386.407, -8.31919 )
+scale = Vector2( 1.15873, 3.52576 )
+texture = ExtResource( 13 )
+
+[node name="CardFront2" type="Sprite" parent="TabContainer/Damage & Edgewear"]
+position = Vector2( 323.074, 575.019 )
+rotation = -1.57152
+scale = Vector2( 0.282708, 0.324048 )
+texture = ExtResource( 12 )
+
+[node name="Bee" type="Sprite" parent="TabContainer/Damage & Edgewear/CardFront2"]
+position = Vector2( -34.2803, -152.901 )
+scale = Vector2( 0.326496, 0.362899 )
+texture = ExtResource( 10 )
+
+[node name="Paper" type="Sprite" parent="TabContainer/Damage & Edgewear/CardFront2"]
+position = Vector2( 259.928, -419.303 )
+rotation = -0.00234512
+scale = Vector2( 0.0742717, 0.0718298 )
+texture = ExtResource( 11 )
+
+[node name="BlurbText" type="Sprite" parent="TabContainer/Damage & Edgewear/CardFront2"]
+position = Vector2( -37.1919, 207.973 )
+rotation = -0.00234512
+scale = Vector2( 1.98883, 2.55746 )
+texture = ExtResource( 6 )
+
+[node name="ShortLongText" type="Sprite" parent="TabContainer/Damage & Edgewear/CardFront2"]
+position = Vector2( -122.74, -417.914 )
+rotation = -0.00234512
+scale = Vector2( 0.398923, 1.09553 )
+texture = ExtResource( 8 )
+
+[node name="DamageHolePunch" type="Sprite" parent="TabContainer/Damage & Edgewear/CardFront2"]
+position = Vector2( 173.575, 387.521 )
+texture = ExtResource( 14 )
+
+[node name="Grime & Miscut" type="Tabs" parent="TabContainer"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 32.0
+margin_right = -4.0
+margin_bottom = -4.0
+
+[node name="BlankPages" type="Sprite" parent="TabContainer/Grime & Miscut"]
+position = Vector2( 251.851, 389.73 )
+rotation = -1.57292
+scale = Vector2( 0.491918, 0.505755 )
+texture = ExtResource( 1 )
+
+[node name="GrimeText" type="Label" parent="TabContainer/Grime & Miscut"]
+margin_left = 17.7264
+margin_top = 756.93
+margin_right = 376.726
+margin_bottom = 821.93
+rect_rotation = -89.7973
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 9 )
+text = "Grime"
+align = 1
+
+[node name="GrimeExplanationText" type="Label" parent="TabContainer/Grime & Miscut"]
+margin_left = 75.7261
+margin_top = 756.729
+margin_right = 433.726
+margin_bottom = 861.729
+rect_rotation = -89.7973
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 4 )
+text = "Material    on    the    card
+from    handling,    use
+or    poor    storage"
+align = 1
+
+[node name="MiscutText" type="Label" parent="TabContainer/Grime & Miscut"]
+margin_left = 17.0
+margin_top = 380.0
+margin_right = 376.0
+margin_bottom = 445.0
+rect_rotation = -89.7973
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 9 )
+text = "Miscut"
+align = 1
+
+[node name="MiscutExaplanationText" type="Label" parent="TabContainer/Grime & Miscut"]
+margin_left = 73.4129
+margin_top = 376.735
+margin_right = 430.413
+margin_bottom = 445.735
+rect_rotation = -89.7973
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 4 )
+text = "The    card    was
+printed    incorrectly
+the    back    image
+is    offcenter"
+align = 1
+
+[node name="CardFront2" type="Sprite" parent="TabContainer/Grime & Miscut"]
+position = Vector2( 335.943, 567.795 )
+rotation = -1.57152
+scale = Vector2( 0.255161, 0.295105 )
+texture = ExtResource( 12 )
+
+[node name="Bee" type="Sprite" parent="TabContainer/Grime & Miscut/CardFront2"]
+position = Vector2( -34.2803, -152.901 )
+scale = Vector2( 0.326496, 0.362899 )
+texture = ExtResource( 10 )
+
+[node name="Paper" type="Sprite" parent="TabContainer/Grime & Miscut/CardFront2"]
+position = Vector2( 259.928, -419.303 )
+rotation = -0.00234512
+scale = Vector2( 0.0742717, 0.0718298 )
+texture = ExtResource( 11 )
+
+[node name="BlurbText" type="Sprite" parent="TabContainer/Grime & Miscut/CardFront2"]
+position = Vector2( -37.1919, 207.973 )
+rotation = -0.00234512
+scale = Vector2( 1.98883, 2.55746 )
+texture = ExtResource( 6 )
+
+[node name="ShortLongText" type="Sprite" parent="TabContainer/Grime & Miscut/CardFront2"]
+position = Vector2( -122.74, -417.914 )
+rotation = -0.00234512
+scale = Vector2( 0.398923, 1.09553 )
+texture = ExtResource( 8 )
+
+[node name="smudge" type="Sprite" parent="TabContainer/Grime & Miscut/CardFront2"]
+position = Vector2( -222.469, -48.4766 )
+texture = ExtResource( 15 )
+
+[node name="Miscut" type="Sprite" parent="TabContainer/Grime & Miscut"]
+position = Vector2( 348.68, 191.603 )
+rotation = -1.56726
+scale = Vector2( 0.230437, 0.271 )
+texture = ExtResource( 16 )
+
+[node name="Scratch & Scribbling" type="Tabs" parent="TabContainer"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 32.0
+margin_right = -4.0
+margin_bottom = -4.0
+
+[node name="BlankPages" type="Sprite" parent="TabContainer/Scratch & Scribbling"]
+position = Vector2( 251.851, 389.73 )
+rotation = -1.57292
+scale = Vector2( 0.491918, 0.505755 )
+texture = ExtResource( 1 )
+
+[node name="ScratchText" type="Label" parent="TabContainer/Scratch & Scribbling"]
+margin_left = 17.7264
+margin_top = 756.93
+margin_right = 376.726
+margin_bottom = 821.93
+rect_rotation = -89.7973
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 9 )
+text = "Scratch"
+align = 1
+
+[node name="ScratchExplanationText" type="Label" parent="TabContainer/Scratch & Scribbling"]
+margin_left = 75.7261
+margin_top = 756.729
+margin_right = 433.726
+margin_bottom = 861.729
+rect_rotation = -89.7973
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 4 )
+text = "A    break    score 
+or     mark
+on    the    card    surface"
+align = 1
+
+[node name="ScribblingText" type="Label" parent="TabContainer/Scratch & Scribbling"]
+margin_left = 17.0
+margin_top = 380.0
+margin_right = 376.0
+margin_bottom = 445.0
+rect_rotation = -89.7973
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 9 )
+text = "Scribbling"
+align = 1
+
+[node name="ScribblingExaplanationText" type="Label" parent="TabContainer/Scratch & Scribbling"]
+margin_left = 73.4129
+margin_top = 376.735
+margin_right = 430.413
+margin_bottom = 445.735
+rect_rotation = -89.7973
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 4 )
+text = "Writing    on    the    card"
+align = 1
+
+[node name="CardFront2" type="Sprite" parent="TabContainer/Scratch & Scribbling"]
+position = Vector2( 335.943, 567.795 )
+rotation = -1.57152
+scale = Vector2( 0.255161, 0.295105 )
+texture = ExtResource( 12 )
+
+[node name="Bee" type="Sprite" parent="TabContainer/Scratch & Scribbling/CardFront2"]
+position = Vector2( -34.2803, -152.901 )
+scale = Vector2( 0.326496, 0.362899 )
+texture = ExtResource( 10 )
+
+[node name="Paper" type="Sprite" parent="TabContainer/Scratch & Scribbling/CardFront2"]
+position = Vector2( 259.928, -419.303 )
+rotation = -0.00234512
+scale = Vector2( 0.0742717, 0.0718298 )
+texture = ExtResource( 11 )
+
+[node name="BlurbText" type="Sprite" parent="TabContainer/Scratch & Scribbling/CardFront2"]
+position = Vector2( -37.1919, 207.973 )
+rotation = -0.00234512
+scale = Vector2( 1.98883, 2.55746 )
+texture = ExtResource( 6 )
+
+[node name="ShortLongText" type="Sprite" parent="TabContainer/Scratch & Scribbling/CardFront2"]
+position = Vector2( -122.74, -417.914 )
+rotation = -0.00234512
+scale = Vector2( 0.398923, 1.09553 )
+texture = ExtResource( 8 )
+
+[node name="scratch" type="Sprite" parent="TabContainer/Scratch & Scribbling/CardFront2"]
+position = Vector2( 101.666, -156.962 )
+scale = Vector2( 1.79118, 2.09381 )
+texture = ExtResource( 18 )
+
+[node name="CardFront3" type="Sprite" parent="TabContainer/Scratch & Scribbling"]
+position = Vector2( 336.895, 189.105 )
+rotation = -1.57152
+scale = Vector2( 0.255161, 0.295105 )
+texture = ExtResource( 12 )
+
+[node name="Bee" type="Sprite" parent="TabContainer/Scratch & Scribbling/CardFront3"]
+position = Vector2( -34.2803, -152.901 )
+scale = Vector2( 0.326496, 0.362899 )
+texture = ExtResource( 10 )
+
+[node name="Paper" type="Sprite" parent="TabContainer/Scratch & Scribbling/CardFront3"]
+position = Vector2( 259.928, -419.303 )
+rotation = -0.00234512
+scale = Vector2( 0.0742717, 0.0718298 )
+texture = ExtResource( 11 )
+
+[node name="BlurbText" type="Sprite" parent="TabContainer/Scratch & Scribbling/CardFront3"]
+position = Vector2( -37.1919, 207.973 )
+rotation = -0.00234512
+scale = Vector2( 1.98883, 2.55746 )
+texture = ExtResource( 6 )
+
+[node name="ShortLongText" type="Sprite" parent="TabContainer/Scratch & Scribbling/CardFront3"]
+position = Vector2( -122.74, -417.914 )
+rotation = -0.00234512
+scale = Vector2( 0.398923, 1.09553 )
+texture = ExtResource( 8 )
+
+[node name="scribble" type="Sprite" parent="TabContainer/Scratch & Scribbling/CardFront3"]
+position = Vector2( -175.872, 269.491 )
+scale = Vector2( 1.11257, 1.20977 )
+texture = ExtResource( 19 )
+
+[node name="Conditions" type="Tabs" parent="TabContainer"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 32.0
+margin_right = -4.0
+margin_bottom = -4.0
+
+[node name="BlankPages" type="Sprite" parent="TabContainer/Conditions"]
+position = Vector2( 251.851, 389.73 )
+rotation = -1.57292
+scale = Vector2( 0.491918, 0.505755 )
+texture = ExtResource( 1 )
+
+[node name="ConditionsText" type="Label" parent="TabContainer/Conditions"]
+margin_left = 20.4202
+margin_top = 378.926
+margin_right = 379.42
+margin_bottom = 443.926
+rect_rotation = -89.7973
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 9 )
+text = "Conditions"
+align = 1
+
+[node name="ConditionsExplanationText" type="Label" parent="TabContainer/Conditions"]
+margin_left = 78.4199
+margin_top = 378.725
+margin_right = 440.42
+margin_bottom = 663.725
+rect_rotation = -89.7973
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 4 )
+text = "Imperfections     impact
+the    card    condition
+
+Different
+Imperfections 
+may    have    different
+impacts    on    the
+end    condition"
+align = 1
+
+[node name="Near Mint" type="Tabs" parent="TabContainer"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 32.0
+margin_right = -4.0
+margin_bottom = -4.0
+
+[node name="BlankPages" type="Sprite" parent="TabContainer/Near Mint"]
+position = Vector2( 251.851, 389.73 )
+rotation = -1.57292
+scale = Vector2( 0.491918, 0.505755 )
+texture = ExtResource( 1 )
+
+[node name="NMText" type="Label" parent="TabContainer/Near Mint"]
+margin_left = 9.0
+margin_top = 757.0
+margin_right = 746.0
+margin_bottom = 822.0
+rect_rotation = -89.7973
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 9 )
+text = "Near             Mint"
+align = 1
+
+[node name="NMExplanationText" type="Label" parent="TabContainer/Near Mint"]
+margin_left = 62.0
+margin_top = 759.0
+margin_right = 423.0
+margin_bottom = 828.0
+rect_rotation = -89.7973
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 4 )
+text = "A    card   with   minimal
+handling   or    wear"
+align = 1
+
+[node name="NMAllowedText" type="Label" parent="TabContainer/Near Mint"]
+margin_left = 152.719
+margin_top = 754.463
+margin_right = 513.719
+margin_bottom = 859.463
+rect_rotation = -89.7973
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 4 )
+text = "2     Points   allowed
+Edgewear
+Scratch"
+
+[node name="NMExcludeText" type="Label" parent="TabContainer/Near Mint"]
+margin_left = 249.742
+margin_top = 761.128
+margin_right = 610.742
+margin_bottom = 974.128
+rect_rotation = -89.7973
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 4 )
+text = "Not Allowed 
+Bend 
+damage 
+grime 
+miscut 
+scribbling "
+align = 2
+
+[node name="CardFront" type="Sprite" parent="TabContainer/Near Mint"]
+position = Vector2( 252.261, 193.151 )
+rotation = -1.57152
+scale = Vector2( 0.287513, 0.315515 )
+texture = ExtResource( 12 )
+
+[node name="Bee" type="Sprite" parent="TabContainer/Near Mint/CardFront"]
+position = Vector2( -34.2803, -152.901 )
+scale = Vector2( 0.326496, 0.362899 )
+texture = ExtResource( 10 )
+
+[node name="Paper" type="Sprite" parent="TabContainer/Near Mint/CardFront"]
+position = Vector2( 259.928, -419.303 )
+rotation = -0.00234512
+scale = Vector2( 0.0742717, 0.0718298 )
+texture = ExtResource( 11 )
+
+[node name="BlurbText" type="Sprite" parent="TabContainer/Near Mint/CardFront"]
+position = Vector2( -37.1919, 207.973 )
+rotation = -0.00234512
+scale = Vector2( 1.98883, 2.55746 )
+texture = ExtResource( 6 )
+
+[node name="ShortLongText" type="Sprite" parent="TabContainer/Near Mint/CardFront"]
+position = Vector2( -122.74, -417.914 )
+rotation = -0.00234512
+scale = Vector2( 0.398923, 1.09553 )
+texture = ExtResource( 8 )
+
+[node name="EdgeWearLeft" type="Sprite" parent="TabContainer/Near Mint/CardFront"]
+position = Vector2( -387.994, -230.187 )
+texture = ExtResource( 13 )
+
+[node name="ScratchSwNe" type="Sprite" parent="TabContainer/Near Mint/CardFront"]
+position = Vector2( 176.429, 418.129 )
+scale = Vector2( 0.739999, 0.479386 )
+texture = ExtResource( 17 )
+
+[node name="Lightly Played" type="Tabs" parent="TabContainer"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 32.0
+margin_right = -4.0
+margin_bottom = -4.0
+
+[node name="BlankPages" type="Sprite" parent="TabContainer/Lightly Played"]
+position = Vector2( 251.851, 389.73 )
+rotation = -1.57292
+scale = Vector2( 0.491918, 0.505755 )
+texture = ExtResource( 1 )
+
+[node name="LPText" type="Label" parent="TabContainer/Lightly Played"]
+margin_left = 9.0
+margin_top = 757.0
+margin_right = 747.0
+margin_bottom = 822.0
+rect_rotation = -89.7973
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 9 )
+text = "Lightly            Played"
+align = 1
+
+[node name="LPExplanationText" type="Label" parent="TabContainer/Lightly Played"]
+margin_left = 67.7261
+margin_top = 756.757
+margin_right = 428.726
+margin_bottom = 825.757
+rect_rotation = -89.7973
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 4 )
+text = "some handling
+nothing significant"
+align = 1
+
+[node name="LPAllowedText" type="Label" parent="TabContainer/Lightly Played"]
+margin_left = 151.719
+margin_top = 754.467
+margin_right = 512.719
+margin_bottom = 931.467
+rect_rotation = -89.7973
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 4 )
+text = "4     Points   allowed
+Bend
+Edgewear
+Grime
+Scratch"
+
+[node name="LPExcludeText" type="Label" parent="TabContainer/Lightly Played"]
+margin_left = 336.196
+margin_top = 602.828
+margin_right = 538.196
+margin_bottom = 743.828
+rect_rotation = -89.7973
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 4 )
+text = "Not Allowed 
+damage 
+miscut 
+scribbling "
+align = 2
+
+[node name="CardFront" type="Sprite" parent="TabContainer/Lightly Played"]
+position = Vector2( 265.416, 189.464 )
+rotation = -1.57152
+scale = Vector2( 0.287513, 0.315515 )
+texture = ExtResource( 12 )
+
+[node name="Bee" type="Sprite" parent="TabContainer/Lightly Played/CardFront"]
+position = Vector2( -34.2803, -152.901 )
+scale = Vector2( 0.326496, 0.362899 )
+texture = ExtResource( 10 )
+
+[node name="Paper" type="Sprite" parent="TabContainer/Lightly Played/CardFront"]
+position = Vector2( 259.928, -419.303 )
+rotation = -0.00234512
+scale = Vector2( 0.0742717, 0.0718298 )
+texture = ExtResource( 11 )
+
+[node name="BlurbText" type="Sprite" parent="TabContainer/Lightly Played/CardFront"]
+position = Vector2( -37.1919, 207.973 )
+rotation = -0.00234512
+scale = Vector2( 1.98883, 2.55746 )
+texture = ExtResource( 6 )
+
+[node name="ShortLongText" type="Sprite" parent="TabContainer/Lightly Played/CardFront"]
+position = Vector2( -122.74, -417.914 )
+rotation = -0.00234512
+scale = Vector2( 0.398923, 1.09553 )
+texture = ExtResource( 8 )
+
+[node name="EdgeWearLeft" type="Sprite" parent="TabContainer/Lightly Played/CardFront"]
+position = Vector2( -387.994, -230.187 )
+texture = ExtResource( 13 )
+
+[node name="ScratchSwNe" type="Sprite" parent="TabContainer/Lightly Played/CardFront"]
+position = Vector2( 231.936, 336.496 )
+texture = ExtResource( 17 )
+
+[node name="SmudgeFingerprint" type="Sprite" parent="TabContainer/Lightly Played/CardFront"]
+position = Vector2( -237.473, 382.038 )
+texture = ExtResource( 15 )
+
+[node name="BendSw" type="Sprite" parent="TabContainer/Lightly Played/CardFront"]
+position = Vector2( -366.001, 436.239 )
+texture = ExtResource( 20 )
+
+[node name="Moderately Played" type="Tabs" parent="TabContainer"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 32.0
+margin_right = -4.0
+margin_bottom = -4.0
+
+[node name="BlankPages" type="Sprite" parent="TabContainer/Moderately Played"]
+position = Vector2( 251.851, 389.73 )
+rotation = -1.57292
+scale = Vector2( 0.491918, 0.505755 )
+texture = ExtResource( 1 )
+
+[node name="MPText" type="Label" parent="TabContainer/Moderately Played"]
+margin_left = 9.0
+margin_top = 757.0
+margin_right = 668.0
+margin_bottom = 822.0
+rect_rotation = -89.7973
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 9 )
+text = "Moderately           Played"
+align = 1
+
+[node name="MPExplanationText" type="Label" parent="TabContainer/Moderately Played"]
+margin_left = 67.7261
+margin_top = 756.757
+margin_right = 428.726
+margin_bottom = 825.757
+rect_rotation = -89.7973
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 4 )
+text = "significant    play
+use   and    wear"
+align = 1
+
+[node name="MPAllowedText" type="Label" parent="TabContainer/Moderately Played"]
+margin_left = 151.719
+margin_top = 754.467
+margin_right = 512.719
+margin_bottom = 931.467
+rect_rotation = -89.7973
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 4 )
+text = "6     Points   allowed
+Bend
+Edgewear
+Grime
+Scratch"
+
+[node name="MPExcludeText" type="Label" parent="TabContainer/Moderately Played"]
+margin_left = 336.196
+margin_top = 602.828
+margin_right = 538.196
+margin_bottom = 743.828
+rect_rotation = -89.7973
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 4 )
+text = "Not Allowed 
+damage 
+miscut 
+scribbling "
+align = 2
+
+[node name="CardFront" type="Sprite" parent="TabContainer/Moderately Played"]
+position = Vector2( 265.416, 189.464 )
+rotation = -1.57152
+scale = Vector2( 0.287513, 0.315515 )
+texture = ExtResource( 12 )
+
+[node name="Bee" type="Sprite" parent="TabContainer/Moderately Played/CardFront"]
+position = Vector2( -34.2803, -152.901 )
+scale = Vector2( 0.326496, 0.362899 )
+texture = ExtResource( 10 )
+
+[node name="Paper" type="Sprite" parent="TabContainer/Moderately Played/CardFront"]
+position = Vector2( 259.928, -419.303 )
+rotation = -0.00234512
+scale = Vector2( 0.0742717, 0.0718298 )
+texture = ExtResource( 11 )
+
+[node name="BlurbText" type="Sprite" parent="TabContainer/Moderately Played/CardFront"]
+position = Vector2( -37.1919, 207.973 )
+rotation = -0.00234512
+scale = Vector2( 1.98883, 2.55746 )
+texture = ExtResource( 6 )
+
+[node name="ShortLongText" type="Sprite" parent="TabContainer/Moderately Played/CardFront"]
+position = Vector2( -122.74, -417.914 )
+rotation = -0.00234512
+scale = Vector2( 0.398923, 1.09553 )
+texture = ExtResource( 8 )
+
+[node name="EdgeWearLeft" type="Sprite" parent="TabContainer/Moderately Played/CardFront"]
+position = Vector2( -387.994, -230.187 )
+texture = ExtResource( 13 )
+
+[node name="ScratchSwNe" type="Sprite" parent="TabContainer/Moderately Played/CardFront"]
+position = Vector2( 231.936, 336.496 )
+texture = ExtResource( 17 )
+
+[node name="SmudgeFingerprint" type="Sprite" parent="TabContainer/Moderately Played/CardFront"]
+position = Vector2( -237.473, 382.038 )
+texture = ExtResource( 15 )
+
+[node name="BendSw" type="Sprite" parent="TabContainer/Moderately Played/CardFront"]
+position = Vector2( -366.001, 436.239 )
+texture = ExtResource( 20 )
+
+[node name="EdgeWearRight" type="Sprite" parent="TabContainer/Moderately Played/CardFront"]
+position = Vector2( 332.763, 323.568 )
+texture = ExtResource( 21 )
+
+[node name="ScratchNwSe" type="Sprite" parent="TabContainer/Moderately Played/CardFront"]
+position = Vector2( 226.432, -338.58 )
+texture = ExtResource( 18 )
+
+[node name="Heavily Played" type="Tabs" parent="TabContainer"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 32.0
+margin_right = -4.0
+margin_bottom = -4.0
+
+[node name="BlankPages" type="Sprite" parent="TabContainer/Heavily Played"]
+position = Vector2( 251.851, 389.73 )
+rotation = -1.57292
+scale = Vector2( 0.491918, 0.505755 )
+texture = ExtResource( 1 )
+
+[node name="HPText" type="Label" parent="TabContainer/Heavily Played"]
+margin_left = 9.0
+margin_top = 757.0
+margin_right = 741.0
+margin_bottom = 822.0
+rect_rotation = -89.7973
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 9 )
+text = "Heavily                  Played"
+align = 1
+
+[node name="HPExplanationText" type="Label" parent="TabContainer/Heavily Played"]
+margin_left = 67.7261
+margin_top = 756.757
+margin_right = 428.726
+margin_bottom = 825.757
+rect_rotation = -89.7973
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 4 )
+text = "significant    damage
+and    imperfections"
+align = 1
+
+[node name="HPAllowedText" type="Label" parent="TabContainer/Heavily Played"]
+margin_left = 151.719
+margin_top = 754.467
+margin_right = 512.719
+margin_bottom = 931.467
+rect_rotation = -89.7973
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 4 )
+text = "8     Points   allowed
+Bend
+Edgewear
+Grime
+Scratch"
+
+[node name="HPExcludeText" type="Label" parent="TabContainer/Heavily Played"]
+margin_left = 336.196
+margin_top = 602.828
+margin_right = 538.196
+margin_bottom = 743.828
+rect_rotation = -89.7973
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 4 )
+text = "Not Allowed 
+damage 
+miscut 
+scribbling "
+align = 2
+
+[node name="CardFront" type="Sprite" parent="TabContainer/Heavily Played"]
+position = Vector2( 265.416, 189.464 )
+rotation = -1.57152
+scale = Vector2( 0.287513, 0.315515 )
+texture = ExtResource( 12 )
+
+[node name="Bee" type="Sprite" parent="TabContainer/Heavily Played/CardFront"]
+position = Vector2( -34.2803, -152.901 )
+scale = Vector2( 0.326496, 0.362899 )
+texture = ExtResource( 10 )
+
+[node name="Paper" type="Sprite" parent="TabContainer/Heavily Played/CardFront"]
+position = Vector2( 259.928, -419.303 )
+rotation = -0.00234512
+scale = Vector2( 0.0742717, 0.0718298 )
+texture = ExtResource( 11 )
+
+[node name="BlurbText" type="Sprite" parent="TabContainer/Heavily Played/CardFront"]
+position = Vector2( -37.1919, 207.973 )
+rotation = -0.00234512
+scale = Vector2( 1.98883, 2.55746 )
+texture = ExtResource( 6 )
+
+[node name="ShortLongText" type="Sprite" parent="TabContainer/Heavily Played/CardFront"]
+position = Vector2( -122.74, -417.914 )
+rotation = -0.00234512
+scale = Vector2( 0.398923, 1.09553 )
+texture = ExtResource( 8 )
+
+[node name="EdgeWearLeft" type="Sprite" parent="TabContainer/Heavily Played/CardFront"]
+position = Vector2( -387.994, -230.187 )
+texture = ExtResource( 13 )
+
+[node name="ScratchSwNe" type="Sprite" parent="TabContainer/Heavily Played/CardFront"]
+position = Vector2( 231.936, 336.496 )
+texture = ExtResource( 17 )
+
+[node name="SmudgeFingerprint" type="Sprite" parent="TabContainer/Heavily Played/CardFront"]
+position = Vector2( -237.473, 382.038 )
+texture = ExtResource( 15 )
+
+[node name="BendSw" type="Sprite" parent="TabContainer/Heavily Played/CardFront"]
+position = Vector2( -366.001, 436.239 )
+texture = ExtResource( 20 )
+
+[node name="EdgeWearRight" type="Sprite" parent="TabContainer/Heavily Played/CardFront"]
+position = Vector2( 332.763, 323.568 )
+texture = ExtResource( 21 )
+
+[node name="ScratchNwSe" type="Sprite" parent="TabContainer/Heavily Played/CardFront"]
+position = Vector2( 226.432, -338.58 )
+texture = ExtResource( 18 )
+
+[node name="EdgeWearBottom" type="Sprite" parent="TabContainer/Heavily Played/CardFront"]
+position = Vector2( -42.4146, 476.635 )
+texture = ExtResource( 22 )
+
+[node name="ScratchNS" type="Sprite" parent="TabContainer/Heavily Played/CardFront"]
+position = Vector2( 230.414, -170.61 )
+texture = ExtResource( 23 )
+
+[node name="Damaged" type="Tabs" parent="TabContainer"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 32.0
+margin_right = -4.0
+margin_bottom = -4.0
+
+[node name="BlankPages" type="Sprite" parent="TabContainer/Damaged"]
+position = Vector2( 251.851, 389.73 )
+rotation = -1.57292
+scale = Vector2( 0.491918, 0.505755 )
+texture = ExtResource( 1 )
+
+[node name="DMGText" type="Label" parent="TabContainer/Damaged"]
+margin_left = 9.0
+margin_top = 757.0
+margin_right = 371.0
+margin_bottom = 822.0
+rect_rotation = -89.7973
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 9 )
+text = "Damaged"
+align = 1
+
+[node name="DMGExplanationText" type="Label" parent="TabContainer/Damaged"]
+margin_left = 67.7261
+margin_top = 756.757
+margin_right = 428.726
+margin_bottom = 825.757
+rect_rotation = -89.7973
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 4 )
+text = "Imperfections    Beyond
+the    Standard"
+align = 1
+
+[node name="DMGAllowedText" type="Label" parent="TabContainer/Damaged"]
+margin_left = 180.719
+margin_top = 754.366
+margin_right = 556.719
+margin_bottom = 931.366
+rect_rotation = -89.7973
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 4 )
+text = "Auto  Damaged
+Damage
+Scribbling"
+
+[node name="DMGExcludeText" type="Label" parent="TabContainer/Damaged"]
+margin_left = 336.196
+margin_top = 602.828
+margin_right = 538.196
+margin_bottom = 743.828
+rect_rotation = -89.7973
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 4 )
+text = "Not Included
+Miscut"
+align = 2
+
+[node name="CardFront" type="Sprite" parent="TabContainer/Damaged"]
+position = Vector2( 265.416, 189.464 )
+rotation = -1.57152
+scale = Vector2( 0.287513, 0.315515 )
+texture = ExtResource( 12 )
+
+[node name="Bee" type="Sprite" parent="TabContainer/Damaged/CardFront"]
+position = Vector2( -34.2803, -152.901 )
+scale = Vector2( 0.326496, 0.362899 )
+texture = ExtResource( 10 )
+
+[node name="Paper" type="Sprite" parent="TabContainer/Damaged/CardFront"]
+position = Vector2( 259.928, -419.303 )
+rotation = -0.00234512
+scale = Vector2( 0.0742717, 0.0718298 )
+texture = ExtResource( 11 )
+
+[node name="BlurbText" type="Sprite" parent="TabContainer/Damaged/CardFront"]
+position = Vector2( -37.1919, 207.973 )
+rotation = -0.00234512
+scale = Vector2( 1.98883, 2.55746 )
+texture = ExtResource( 6 )
+
+[node name="ScribblePurple" type="Sprite" parent="TabContainer/Damaged/CardFront/BlurbText"]
+position = Vector2( -31.0251, -15.1622 )
+texture = ExtResource( 19 )
+
+[node name="ShortLongText" type="Sprite" parent="TabContainer/Damaged/CardFront"]
+position = Vector2( -122.74, -417.914 )
+rotation = -0.00234512
+scale = Vector2( 0.398923, 1.09553 )
+texture = ExtResource( 8 )
+
+[node name="EdgeWearLeft" type="Sprite" parent="TabContainer/Damaged/CardFront"]
+position = Vector2( -387.994, -230.187 )
+texture = ExtResource( 13 )
+
+[node name="ScratchSwNe" type="Sprite" parent="TabContainer/Damaged/CardFront"]
+position = Vector2( 231.936, 336.496 )
+texture = ExtResource( 17 )
+
+[node name="SmudgeFingerprint" type="Sprite" parent="TabContainer/Damaged/CardFront"]
+position = Vector2( -237.473, 382.038 )
+texture = ExtResource( 15 )
+
+[node name="BendSw" type="Sprite" parent="TabContainer/Damaged/CardFront"]
+position = Vector2( -366.001, 436.239 )
+texture = ExtResource( 20 )
+
+[node name="EdgeWearRight" type="Sprite" parent="TabContainer/Damaged/CardFront"]
+position = Vector2( 332.763, 323.568 )
+texture = ExtResource( 21 )
+
+[node name="ScratchNwSe" type="Sprite" parent="TabContainer/Damaged/CardFront"]
+position = Vector2( 226.432, -338.58 )
+texture = ExtResource( 18 )
+
+[node name="EdgeWearBottom" type="Sprite" parent="TabContainer/Damaged/CardFront"]
+position = Vector2( -42.4146, 476.635 )
+texture = ExtResource( 22 )
+
+[node name="ScratchNS" type="Sprite" parent="TabContainer/Damaged/CardFront"]
+position = Vector2( 230.414, -170.61 )
+texture = ExtResource( 23 )
+
+[node name="DamageHolePunch" type="Sprite" parent="TabContainer/Damaged/CardFront"]
+position = Vector2( 37.2861, 378.184 )
+texture = ExtResource( 14 )
+
+[node name="Defect" type="Tabs" parent="TabContainer"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 32.0
+margin_right = -4.0
+margin_bottom = -4.0
+
+[node name="BlankPages" type="Sprite" parent="TabContainer/Defect"]
+position = Vector2( 251.851, 389.73 )
+rotation = -1.57292
+scale = Vector2( 0.491918, 0.505755 )
+texture = ExtResource( 1 )
+
+[node name="DefectText" type="Label" parent="TabContainer/Defect"]
+margin_left = 17.0
+margin_top = 757.0
+margin_right = 378.0
+margin_bottom = 822.0
+rect_rotation = -89.7973
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 9 )
+text = "Defect"
+align = 1
+
+[node name="DefectExplanationText" type="Label" parent="TabContainer/Defect"]
+margin_left = 77.0
+margin_top = 757.0
+margin_right = 435.0
+margin_bottom = 826.0
+rect_rotation = -89.7973
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 4 )
+text = "Errors     Made
+During    Manufacturing"
+align = 1
+
+[node name="DefectAllowedText" type="Label" parent="TabContainer/Defect"]
+margin_left = 181.0
+margin_top = 754.0
+margin_right = 537.0
+margin_bottom = 931.0
+rect_rotation = -89.7973
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 4 )
+text = "Auto  Defect
+Miscut"
+align = 1
+
+[node name="Miscut" type="Sprite" parent="TabContainer/Defect"]
+position = Vector2( 225.457, 186.39 )
+rotation = -1.57425
+scale = Vector2( 0.313789, 0.34974 )
+texture = ExtResource( 16 )
 
 [connection signal="pressed" from="CloseButton" to="." method="_on_CloseButton_pressed"]
