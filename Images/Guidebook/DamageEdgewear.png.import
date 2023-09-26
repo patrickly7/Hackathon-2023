@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/EmptyPage.png-1d351fc35f52be123d06f0369b0cd7a7.stex"
+path="res://.import/DamageEdgewear.png-a2f002a824c198cdd25fb9c921632496.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Images/Greybox/EmptyPage.png"
-dest_files=[ "res://.import/EmptyPage.png-1d351fc35f52be123d06f0369b0cd7a7.stex" ]
+source_file="res://Images/Guidebook/DamageEdgewear.png"
+dest_files=[ "res://.import/DamageEdgewear.png-a2f002a824c198cdd25fb9c921632496.stex" ]
 
 [params]
 

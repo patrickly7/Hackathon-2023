@@ -18,10 +18,10 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 
 [node name="PanelContainer" type="PanelContainer" parent="PauseScreenContainer"]
-margin_left = 419.0
-margin_top = 249.0
-margin_right = 605.0
-margin_bottom = 351.0
+margin_left = 867.0
+margin_top = 489.0
+margin_right = 1053.0
+margin_bottom = 591.0
 custom_styles/panel = SubResource( 2 )
 
 [node name="MarginContainer" type="MarginContainer" parent="PauseScreenContainer/PanelContainer"]

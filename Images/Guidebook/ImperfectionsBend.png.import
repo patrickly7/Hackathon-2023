@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/IndexPage.png-034f256431337cd16e2e3f216ab83db4.stex"
+path="res://.import/ImperfectionsBend.png-92dca0bb7e3acf18c41b0bfc8920cdd9.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Images/Greybox/IndexPage.png"
-dest_files=[ "res://.import/IndexPage.png-034f256431337cd16e2e3f216ab83db4.stex" ]
+source_file="res://Images/Guidebook/ImperfectionsBend.png"
+dest_files=[ "res://.import/ImperfectionsBend.png-92dca0bb7e3acf18c41b0bfc8920cdd9.stex" ]
 
 [params]
 
