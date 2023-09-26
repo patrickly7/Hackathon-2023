@@ -17,3 +17,4 @@ mono_crash.*.json
 # Ignore HTML exports
 HTML/
 Hackathon-2023-HTML.*.zip
+Hackathon-2023-HTML-.*.zip
