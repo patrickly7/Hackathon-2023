@@ -160,6 +160,7 @@ text = "Submit"
 
 [connection signal="pressed" from="FlipCardButton" to="." method="_on_FlipCardButton_pressed"]
 [connection signal="pressed" from="PauseButton" to="." method="_on_PauseButton_pressed"]
+[connection signal="hide" from="PauseMenu" to="." method="_on_PauseMenu_hide"]
 [connection signal="pressed" from="GuidebookButton" to="." method="_on_GuidebookButton_pressed"]
 [connection signal="hide" from="Guidebook" to="." method="_on_Guidebook_hide"]
 [connection signal="timeout" from="TimerNode/Timer" to="." method="_on_Timer_timeout"]

@@ -67,10 +67,12 @@ func _ready():
 func _on_PauseButton_pressed():
 	get_tree().paused = true
 	$PauseMenu.show()
+	$PauseButton.hide()
 
 func _on_GuidebookButton_pressed():
 	hideControls()
 	$Guidebook.show()
+	Global.guidebookUses += 1
 
 func _on_FlipCardButton_pressed():
 	flipCard()
@@ -80,7 +82,7 @@ func _on_Timer_timeout():
 
 func _process(delta):
 	$TimerNode/TimerLabel.text = str(floor($TimerNode/Timer.time_left))
-	if ($TimerNode/Timer.time_left < 179):
+	if ($TimerNode/Timer.time_left < 179.75):
 		$StartText.hide()
 		
 	# Verify if Condition Select should be disabled
@@ -113,6 +115,7 @@ func showControls():
 	$ProcessCardActions.show()
 
 func _on_SubmitButton_pressed():
+	determineSuccessfulProcessing()
 	generateCard()
 	cardsRemaining -= 1
 
@@ -133,6 +136,10 @@ func generateCard():
 	$Node2D/CurrentCardFront/CardArt.texture = load(cardArts[randomCardArtIndex])
 	
 func endGame():
+	Global.timeRemaining = floor($TimerNode/Timer.time_left)
+	$TimerNode/Timer.stop()
+	Global.cardsRemaining = cardsRemaining
+	
 	$TimerNode/Timer.queue_free()
 	get_tree().change_scene("res://Scenes/Results.tscn")
 	
@@ -143,3 +150,9 @@ func flipCard():
 	else:
 		$Node2D/CurrentCardFront.show()
 		$Node2D/CurrentCardBack.hide()
+		
+func determineSuccessfulProcessing():
+	Global.cardsSuccessfullyProcessed += 1
+
+func _on_PauseMenu_hide():
+	$PauseButton.show()
