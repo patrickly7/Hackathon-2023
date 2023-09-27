@@ -77,6 +77,8 @@ var currentCorrectCondition = "Near Mint"
 func _ready():
 	rng.randomize()
 	
+	$GuidebookButton.disabled = true
+	
 	# Give time for GET READY text
 	yield(get_tree().create_timer(2.0), "timeout")
 	
@@ -89,7 +91,7 @@ func _ready():
 	$CardsRemaining.show()
 	$FlipCardButton.show()
 	$ProcessCardActions.show()
-	$GuidebookButton.show()
+	$GuidebookButton.disabled = false
 	
 	$ProcessCardActions/DiscrepancySelect.add_item("Condition")
 	$ProcessCardActions/DiscrepancySelect.add_item("Defect")
