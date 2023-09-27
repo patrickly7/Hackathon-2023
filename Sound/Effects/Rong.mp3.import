@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Rong.mp3-aea0221eb19a8395847e2b3d9c93a899.mp3str"
+
+[deps]
+
+source_file="res://Sound/Effects/Rong.mp3"
+dest_files=[ "res://.import/Rong.mp3-aea0221eb19a8395847e2b3d9c93a899.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

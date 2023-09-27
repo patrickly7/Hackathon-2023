@@ -159,8 +159,6 @@ func _on_SubmitButton_pressed():
 	determineSuccessfulProcessing()
 	generateCard()
 	cardsRemaining -= 1
-	
-	playButtonClick()
 
 func generateCard():
 	generateCardStyling()
@@ -320,6 +318,7 @@ func determineSuccessfulProcessing():
 	
 	# Do Nothing if it's not correct
 	if (currDiscrepancyType != currentCorrectDiscrepancyType):
+		playWrongSound()
 		return
 	
 	if (currDiscrepancyType == "Condition"):
@@ -327,8 +326,10 @@ func determineSuccessfulProcessing():
 		var currCondition = $ProcessCardActions/ConditionSelect.get_item_text(currConditionTypeId)
 		
 		if (currCondition != currentCorrectCondition):
+			playWrongSound()
 			return
 	
+	playCorrectSound()
 	Global.cardsSuccessfullyProcessed += 1
 
 func _on_PauseButton_pressed():
@@ -354,3 +355,12 @@ func playPageFlip():
 func playButtonClick():
 	$BackgroundSFX.stream = load("res://Sound/Effects/Click.mp3")
 	$BackgroundSFX.play()
+	
+func playCorrectSound():
+	$BackgroundSFX.stream = load("res://Sound/Effects/Correct.mp3")
+	$BackgroundSFX.play()
+	
+func playWrongSound():
+	$BackgroundSFX.stream = load("res://Sound/Effects/Rong.mp3")
+	$BackgroundSFX.play()
+	
