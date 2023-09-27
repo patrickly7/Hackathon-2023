@@ -286,7 +286,12 @@ func generateCardImperfections():
 	print(currentCorrectDiscrepancyType, currentCorrectCondition)
 
 func endGame():
-	Global.timeRemaining = floor($TimerNode/Timer.time_left)
+	var time = floor($TimerNode/Timer.time_left)
+	if (time >= 180):
+		Global.timeRemaining = 0
+	else:
+		Global.timeRemaining = time
+		
 	$TimerNode/Timer.stop()
 	Global.cardsRemaining = cardsRemaining
 	

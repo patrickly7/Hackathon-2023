@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=2]
+[gd_scene load_steps=34 format=2]
 
 [ext_resource path="res://Images/UI/Hourglass.png" type="Texture" id=1]
 [ext_resource path="res://Images/Card/CardFront.png" type="Texture" id=2]
@@ -31,6 +31,7 @@
 [ext_resource path="res://Images/Background/GuidebookHover.png" type="Texture" id=29]
 [ext_resource path="res://Images/Discrep/Scratch_SW_NE.png" type="Texture" id=30]
 [ext_resource path="res://Images/UI/FlipCardButton.png" type="Texture" id=31]
+[ext_resource path="res://Sound/Music/MainGameLoop.mp3" type="AudioStream" id=32]
 
 [sub_resource type="DynamicFont" id=1]
 size = 32
@@ -275,6 +276,10 @@ margin_right = 1614.0
 margin_bottom = 855.0
 custom_fonts/font = ExtResource( 14 )
 text = "Submit"
+
+[node name="BackgroundMusic" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 32 )
+autoplay = true
 
 [connection signal="pressed" from="FlipCardButton" to="." method="_on_FlipCardButton_pressed"]
 [connection signal="pressed" from="PauseButton" to="." method="_on_PauseButton_pressed"]
