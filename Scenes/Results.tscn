@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Scripts/Results.gd" type="Script" id=1]
 [ext_resource path="res://Images/UI/S-Rank.png" type="Texture" id=2]
@@ -6,6 +6,12 @@
 [ext_resource path="res://Assets/Fonts/joystix_32.tres" type="DynamicFont" id=4]
 [ext_resource path="res://Images/Background/Main.png" type="Texture" id=5]
 [ext_resource path="res://Images/Background/Guidebook.png" type="Texture" id=6]
+[ext_resource path="res://Assets/Fonts/joystix monospace.otf" type="DynamicFontData" id=7]
+[ext_resource path="res://Images/UI/SpeechBubble.png" type="Texture" id=8]
+
+[sub_resource type="DynamicFont" id=1]
+size = 36
+font_data = ExtResource( 7 )
 
 [node name="Results" type="Node2D"]
 script = ExtResource( 1 )
@@ -54,25 +60,25 @@ text = "Guidebook Uses: 0"
 
 [node name="Ranking" type="Sprite" parent="."]
 visible = false
-position = Vector2( 1550, 285 )
+position = Vector2( 1610, 285 )
 scale = Vector2( 0.837705, 0.837705 )
 texture = ExtResource( 2 )
 
 [node name="PlayAgainButton" type="Button" parent="."]
 visible = false
 margin_left = 707.0
-margin_top = 565.0
+margin_top = 585.0
 margin_right = 1212.0
-margin_bottom = 720.0
+margin_bottom = 740.0
 custom_fonts/font = ExtResource( 3 )
 text = "Play Again"
 
 [node name="StartMenuButton" type="Button" parent="."]
 visible = false
 margin_left = 708.0
-margin_top = 765.0
+margin_top = 785.0
 margin_right = 1211.0
-margin_bottom = 909.0
+margin_bottom = 929.0
 custom_fonts/font = ExtResource( 3 )
 text = "Main Menu"
 
@@ -84,6 +90,24 @@ margin_right = 1925.0
 margin_bottom = 1088.0
 mouse_filter = 2
 color = Color( 0, 0, 0, 0.501961 )
+
+[node name="FlavorText" type="Node2D" parent="."]
+visible = false
+
+[node name="SpeechBubble" type="Sprite" parent="FlavorText"]
+position = Vector2( 693, 390 )
+scale = Vector2( 0.796453, 0.538329 )
+texture = ExtResource( 8 )
+
+[node name="Label" type="Label" parent="FlavorText"]
+margin_left = 334.0
+margin_top = 333.0
+margin_right = 1292.0
+margin_bottom = 447.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "How did you do that?
+can you do my work too?"
 
 [connection signal="pressed" from="PlayAgainButton" to="." method="_on_PlayAgainButton_pressed"]
 [connection signal="pressed" from="StartMenuButton" to="." method="_on_StartMenuButton_pressed"]
