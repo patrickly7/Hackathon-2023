@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Scripts/StartMenu.gd" type="Script" id=1]
 [ext_resource path="res://Assets/Fonts/arcade_64.tres" type="DynamicFont" id=2]
 [ext_resource path="res://Assets/Fonts/arcade_32.tres" type="DynamicFont" id=3]
+[ext_resource path="res://Sound/Effects/Click.mp3" type="AudioStream" id=4]
 
 [node name="StartMenu" type="Node2D"]
 script = ExtResource( 1 )
@@ -40,6 +41,9 @@ margin_right = 1036.0
 margin_bottom = 405.0
 custom_fonts/normal_font = ExtResource( 2 )
 text = "AC PC"
+
+[node name="BackgroundSFX" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )
 
 [connection signal="pressed" from="PlayButton" to="." method="_on_PlayButton_pressed"]
 [connection signal="pressed" from="QuitButton" to="." method="_on_QuitButton_pressed"]

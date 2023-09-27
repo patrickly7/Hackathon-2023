@@ -300,6 +300,8 @@ color = Color( 0, 0, 0, 0.501961 )
 stream = ExtResource( 32 )
 autoplay = true
 
+[node name="BackgroundSFX" type="AudioStreamPlayer" parent="."]
+
 [connection signal="pressed" from="FlipCardButton" to="." method="_on_FlipCardButton_pressed"]
 [connection signal="pressed" from="PauseButton" to="." method="_on_PauseButton_pressed"]
 [connection signal="hide" from="PauseMenu" to="." method="_on_PauseMenu_hide"]

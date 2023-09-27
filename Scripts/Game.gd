@@ -112,9 +112,11 @@ func _on_GuidebookButton_pressed():
 	hideControls()
 	$Guidebook.show()
 	Global.guidebookUses += 1
+	playPageFlip()
 
 func _on_FlipCardButton_pressed():
 	flipCard()
+	playCardFlip()
 
 func _on_Timer_timeout():
 	endGame()
@@ -157,6 +159,8 @@ func _on_SubmitButton_pressed():
 	determineSuccessfulProcessing()
 	generateCard()
 	cardsRemaining -= 1
+	
+	playButtonClick()
 
 func generateCard():
 	generateCardStyling()
@@ -332,7 +336,21 @@ func _on_PauseButton_pressed():
 	$PauseMenu.show()
 	$PauseButton.hide()
 	$ProcessCardActions.hide()
+	
+	playButtonClick()
 
 func _on_PauseMenu_hide():
 	$PauseButton.show()
 	$ProcessCardActions.show()
+
+func playCardFlip():
+	$BackgroundSFX.stream = load("res://Sound/Effects/Flip_Card.mp3")
+	$BackgroundSFX.play()
+
+func playPageFlip():
+	$BackgroundSFX.stream = load("res://Sound/Effects/Flip_Page.mp3")
+	$BackgroundSFX.play()
+
+func playButtonClick():
+	$BackgroundSFX.stream = load("res://Sound/Effects/Click.mp3")
+	$BackgroundSFX.play()

@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Flip_Page.mp3-f3358ced4779a64b49a61d75606e7420.mp3str"
+
+[deps]
+
+source_file="res://Sound/Effects/Flip_Page.mp3"
+dest_files=[ "res://.import/Flip_Page.mp3-f3358ced4779a64b49a61d75606e7420.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0
