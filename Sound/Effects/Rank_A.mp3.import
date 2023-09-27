@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Rank_A.mp3-c1cdd8ef772814c3c0c51fb4926f5de5.mp3str"
+
+[deps]
+
+source_file="res://Sound/Effects/Rank_A.mp3"
+dest_files=[ "res://.import/Rank_A.mp3-c1cdd8ef772814c3c0c51fb4926f5de5.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0
