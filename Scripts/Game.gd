@@ -94,6 +94,10 @@ func _ready():
 	$ProcessCardActions/DiscrepancySelect.add_item("Condition")
 	$ProcessCardActions/DiscrepancySelect.add_item("Defect")
 	
+#	$ProcessCardActions/DiscrepancySelect.theme = Theme.new()
+#	$ProcessCardActions/DiscrepancySelect.theme.default_font = DynamicFont.new()
+#	$ProcessCardActions/DiscrepancySelect.theme.default_font.font_data = load("res://Assets/Fonts/arcade_32.tres")
+	
 	$ProcessCardActions/ConditionSelect.add_item("Near Mint")
 	$ProcessCardActions/ConditionSelect.add_item("Lightly Played")
 	$ProcessCardActions/ConditionSelect.add_item("Moderately Played")
