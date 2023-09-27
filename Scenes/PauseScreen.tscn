@@ -1,0 +1,57 @@
+[gd_scene load_steps=3 format=2]
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0, 0, 0, 0.25098 )
+
+[sub_resource type="StyleBoxFlat" id=2]
+
+[node name="PauseScreen" type="CanvasLayer"]
+pause_mode = 2
+
+[node name="Overlay" type="PanelContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_styles/panel = SubResource( 1 )
+
+[node name="PauseScreenContainer" type="CenterContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="PanelContainer" type="PanelContainer" parent="PauseScreenContainer"]
+margin_left = 867.0
+margin_top = 489.0
+margin_right = 1053.0
+margin_bottom = 591.0
+custom_styles/panel = SubResource( 2 )
+
+[node name="MarginContainer" type="MarginContainer" parent="PauseScreenContainer/PanelContainer"]
+margin_right = 186.0
+margin_bottom = 102.0
+custom_constants/margin_right = 20
+custom_constants/margin_top = 20
+custom_constants/margin_left = 20
+custom_constants/margin_bottom = 20
+
+[node name="Rows" type="VBoxContainer" parent="PauseScreenContainer/PanelContainer/MarginContainer"]
+margin_left = 20.0
+margin_top = 20.0
+margin_right = 166.0
+margin_bottom = 82.0
+
+[node name="Title" type="Label" parent="PauseScreenContainer/PanelContainer/MarginContainer/Rows"]
+margin_right = 146.0
+margin_bottom = 14.0
+text = "PAUSED"
+align = 1
+
+[node name="Button" type="Button" parent="PauseScreenContainer/PanelContainer/MarginContainer/Rows"]
+margin_top = 18.0
+margin_right = 146.0
+margin_bottom = 38.0
+text = "Resume"
+
+[node name="Button2" type="Button" parent="PauseScreenContainer/PanelContainer/MarginContainer/Rows"]
+margin_top = 42.0
+margin_right = 146.0
+margin_bottom = 62.0
+text = "Return to Main Menu"
