@@ -89,6 +89,7 @@ func _ready():
 	$StartText.show()
 	$PauseButton.show()
 	$CardsRemaining.show()
+	$CardStack.show()
 	$FlipCardButton.show()
 	$ProcessCardActions.show()
 	$GuidebookButton.disabled = false
@@ -137,6 +138,13 @@ func _process(delta):
 		
 	# Update Cards Remaining
 	$CardsRemaining.text = "Cards Remaining: " + str(cardsRemaining)	
+	
+	if (cardsRemaining <= 5):
+		$CardStack.texture = load("res://Images/Card/CardStack5.png")
+	elif (cardsRemaining <= 10):
+		$CardStack.texture = load("res://Images/Card/CardStack10.png")
+	elif (cardsRemaining <= 15):
+		$CardStack.texture = load("res://Images/Card/CardStack15.png")
 	
 	# Verify if there are no cards remaining
 	if (cardsRemaining <= 0):

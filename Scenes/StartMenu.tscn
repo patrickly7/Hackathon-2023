@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Scripts/StartMenu.gd" type="Script" id=1]
 [ext_resource path="res://Assets/Fonts/arcade_64.tres" type="DynamicFont" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://Sound/Effects/Click.mp3" type="AudioStream" id=4]
 [ext_resource path="res://Images/Background/Title.png" type="Texture" id=5]
 [ext_resource path="res://Images/Background/ACPCLogo.png" type="Texture" id=6]
+[ext_resource path="res://Sound/Music/OfficeAmbience.mp3" type="AudioStream" id=7]
 
 [node name="StartMenu" type="Node2D"]
 script = ExtResource( 1 )
@@ -49,6 +50,10 @@ texture = ExtResource( 5 )
 position = Vector2( 960, 296 )
 scale = Vector2( 0.799335, 0.799335 )
 texture = ExtResource( 6 )
+
+[node name="BackgroundMusic" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 7 )
+autoplay = true
 
 [connection signal="pressed" from="PlayButton" to="." method="_on_PlayButton_pressed"]
 [connection signal="pressed" from="QuitButton" to="." method="_on_QuitButton_pressed"]
