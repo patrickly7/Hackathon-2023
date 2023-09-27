@@ -1,10 +1,9 @@
-[gd_scene load_steps=24 format=2]
+[gd_scene load_steps=23 format=2]
 
 [ext_resource path="res://Images/Guidebook/Blank Pages.png" type="Texture" id=1]
 [ext_resource path="res://Scripts/Guidebook.gd" type="Script" id=2]
 [ext_resource path="res://Images/Guidebook/FrontPage.png" type="Texture" id=3]
 [ext_resource path="res://Assets/Fonts/arcade_32.tres" type="DynamicFont" id=4]
-[ext_resource path="res://Assets/Fonts/joystix_32.tres" type="DynamicFont" id=5]
 [ext_resource path="res://Images/Text/BlurbText.png" type="Texture" id=6]
 [ext_resource path="res://Images/Discrep/Bend_SE.png" type="Texture" id=7]
 [ext_resource path="res://Images/Text/ShortLongText.png" type="Texture" id=8]
@@ -36,14 +35,13 @@ custom_fonts/font = ExtResource( 9 )
 text = "Close"
 
 [node name="TabContainer" type="TabContainer" parent="."]
-margin_left = 1412.0
-margin_top = 461.0
-margin_right = 1923.0
-margin_bottom = 1279.0
+margin_left = 1672.0
+margin_top = 109.0
+margin_right = 2544.0
+margin_bottom = 1442.0
 rect_rotation = 90.198
 
 [node name="Front Page" type="Tabs" parent="TabContainer"]
-visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 4.0
@@ -52,17 +50,17 @@ margin_right = -4.0
 margin_bottom = -4.0
 
 [node name="FrontPage" type="Sprite" parent="TabContainer/Front Page"]
-position = Vector2( 250.457, 208.372 )
-rotation = -1.57425
-scale = Vector2( 0.490458, 0.492549 )
+position = Vector2( 420, 335 )
+rotation = -1.5708
+scale = Vector2( 0.8, 0.8 )
 texture = ExtResource( 3 )
 
 [node name="Guidebook Title" type="Label" parent="TabContainer/Front Page"]
-margin_left = 102.427
-margin_top = 380.635
-margin_right = 470.427
-margin_bottom = 649.635
-rect_rotation = -90.3604
+margin_left = 252.0
+margin_top = 623.0
+margin_right = 836.0
+margin_bottom = 892.0
+rect_rotation = -90.0
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_fonts/font = ExtResource( 9 )
 text = "Guidebook !
@@ -81,20 +79,43 @@ margin_right = -4.0
 margin_bottom = -4.0
 
 [node name="BlankPages" type="Sprite" parent="TabContainer/Index"]
-position = Vector2( 251.851, 389.73 )
-rotation = -1.57292
-scale = Vector2( 0.491918, 0.505755 )
+position = Vector2( 428, 642 )
+rotation = -1.5708
+scale = Vector2( 0.8, 0.8 )
 texture = ExtResource( 1 )
 
 [node name="Index Text" type="Label" parent="TabContainer/Index"]
-margin_left = 16.1092
-margin_top = 288.932
-margin_right = 191.109
-margin_bottom = 353.932
-rect_rotation = -89.9229
+margin_left = 56.0
+margin_top = 623.0
+margin_right = 640.0
+margin_bottom = 688.0
+rect_rotation = -90.0
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_fonts/font = ExtResource( 9 )
 text = "Index"
+align = 1
+
+[node name="Label" type="Label" parent="TabContainer/Index"]
+margin_left = 137.0
+margin_top = 623.0
+margin_right = 721.0
+margin_bottom = 637.0
+rect_rotation = -90.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 4 )
+text = "Goal
+Imperfections    And     Bend
+Damage    And    Edgewear
+Grime     And    Miscut
+Scratch    And    Scribbling
+Conditions
+Near    Mint
+Lightly    Played
+Moderately     Played
+Heavily    Played
+Damaged
+Defect"
+align = 1
 
 [node name="Goal" type="Tabs" parent="TabContainer"]
 visible = false
@@ -106,28 +127,28 @@ margin_right = -4.0
 margin_bottom = -4.0
 
 [node name="BlankPages" type="Sprite" parent="TabContainer/Goal"]
-position = Vector2( 251.851, 389.73 )
-rotation = -1.57292
-scale = Vector2( 0.491918, 0.505755 )
+position = Vector2( 428, 642 )
+rotation = -1.5708
+scale = Vector2( 0.8, 0.8 )
 texture = ExtResource( 1 )
 
 [node name="GoalText" type="Label" parent="TabContainer/Goal"]
-margin_left = 17.0
-margin_top = 380.0
-margin_right = 376.0
-margin_bottom = 445.0
-rect_rotation = -89.7973
+margin_left = 56.0
+margin_top = 623.0
+margin_right = 640.0
+margin_bottom = 688.0
+rect_rotation = -90.0
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_fonts/font = ExtResource( 9 )
 text = "Goal"
 align = 1
 
 [node name="GoalExaplanationText" type="Label" parent="TabContainer/Goal"]
-margin_left = 104.0
-margin_top = 377.0
-margin_right = 461.0
-margin_bottom = 442.0
-rect_rotation = -89.7973
+margin_left = 289.0
+margin_top = 624.0
+margin_right = 874.0
+margin_bottom = 873.0
+rect_rotation = -90.0
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_fonts/font = ExtResource( 4 )
 text = "Correctly    Identify 
@@ -149,28 +170,28 @@ margin_right = -4.0
 margin_bottom = -4.0
 
 [node name="BlankPages" type="Sprite" parent="TabContainer/Bend"]
-position = Vector2( 251.851, 389.73 )
-rotation = -1.57292
-scale = Vector2( 0.491918, 0.505755 )
+position = Vector2( 428, 642 )
+rotation = -1.5708
+scale = Vector2( 0.8, 0.8 )
 texture = ExtResource( 1 )
 
 [node name="ImperfectionsText" type="Label" parent="TabContainer/Bend"]
-margin_left = 25.7298
-margin_top = 757.902
-margin_right = 384.73
-margin_bottom = 822.902
-rect_rotation = -89.7973
+margin_left = 56.0
+margin_top = 1239.0
+margin_right = 640.0
+margin_bottom = 1304.0
+rect_rotation = -90.0
 custom_colors/font_color = Color( 0, 0, 0, 1 )
-custom_fonts/font = ExtResource( 5 )
+custom_fonts/font = ExtResource( 9 )
 text = "Imperfections"
 align = 1
 
 [node name="ImperfectionsExplanationText" type="Label" parent="TabContainer/Bend"]
-margin_left = 107.0
-margin_top = 756.0
-margin_right = 465.0
-margin_bottom = 1005.0
-rect_rotation = -89.7973
+margin_left = 235.0
+margin_top = 1239.0
+margin_right = 819.0
+margin_bottom = 1416.0
+rect_rotation = -90.0
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_fonts/font = ExtResource( 4 )
 text = "The     condition     of     a
@@ -181,22 +202,22 @@ IMPERFECTIONS
 align = 1
 
 [node name="BendText" type="Label" parent="TabContainer/Bend"]
-margin_left = 17.0
-margin_top = 380.0
-margin_right = 376.0
-margin_bottom = 445.0
-rect_rotation = -89.7973
+margin_left = 56.0
+margin_top = 623.0
+margin_right = 640.0
+margin_bottom = 688.0
+rect_rotation = -90.0
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_fonts/font = ExtResource( 9 )
 text = "Bend"
 align = 1
 
 [node name="BendExaplanationText" type="Label" parent="TabContainer/Bend"]
-margin_left = 73.4129
-margin_top = 376.735
-margin_right = 430.413
-margin_bottom = 445.735
-rect_rotation = -89.7973
+margin_left = 137.0
+margin_top = 623.0
+margin_right = 721.0
+margin_bottom = 692.0
+rect_rotation = -90.0
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_fonts/font = ExtResource( 4 )
 text = "A     line     or    ridge
@@ -204,9 +225,9 @@ from     bending     a     card"
 align = 1
 
 [node name="CardFront" type="Sprite" parent="TabContainer/Bend"]
-position = Vector2( 315.108, 193.515 )
+position = Vector2( 507, 321 )
 rotation = -1.57152
-scale = Vector2( 0.287513, 0.335155 )
+scale = Vector2( 0.6, 0.6 )
 texture = ExtResource( 12 )
 
 [node name="Bee" type="Sprite" parent="TabContainer/Bend/CardFront"]
@@ -238,6 +259,7 @@ scale = Vector2( 0.398923, 1.09553 )
 texture = ExtResource( 8 )
 
 [node name="Damage & Edgewear" type="Tabs" parent="TabContainer"]
+visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 4.0
@@ -246,63 +268,61 @@ margin_right = -4.0
 margin_bottom = -4.0
 
 [node name="BlankPages" type="Sprite" parent="TabContainer/Damage & Edgewear"]
-position = Vector2( 251.851, 389.73 )
-rotation = -1.57292
-scale = Vector2( 0.491918, 0.505755 )
+position = Vector2( 428, 642 )
+rotation = -1.5708
+scale = Vector2( 0.8, 0.8 )
 texture = ExtResource( 1 )
 
 [node name="DamageText" type="Label" parent="TabContainer/Damage & Edgewear"]
-margin_left = 17.7264
-margin_top = 756.93
-margin_right = 376.726
-margin_bottom = 821.93
-rect_rotation = -89.7973
+margin_left = 56.0
+margin_top = 1239.0
+margin_right = 640.0
+margin_bottom = 1304.0
+rect_rotation = -90.0
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_fonts/font = ExtResource( 9 )
 text = "Damage"
 align = 1
 
 [node name="DamageExplanationText" type="Label" parent="TabContainer/Damage & Edgewear"]
-margin_left = 67.0
-margin_top = 756.0
-margin_right = 425.0
-margin_bottom = 861.0
+margin_left = 137.0
+margin_top = 1239.0
+margin_right = 721.0
+margin_bottom = 1344.0
 rect_rotation = -89.7973
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_fonts/font = ExtResource( 4 )
-text = "severe     imperfection
-that    impacts     the
-card     integrity"
+text = "severe     imperfection    that
+ impacts   the    card     integrity"
 align = 1
 
 [node name="EdgewearText" type="Label" parent="TabContainer/Damage & Edgewear"]
-margin_left = 17.0
-margin_top = 380.0
-margin_right = 376.0
-margin_bottom = 445.0
-rect_rotation = -89.7973
+margin_left = 56.0
+margin_top = 623.0
+margin_right = 640.0
+margin_bottom = 688.0
+rect_rotation = -90.0
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_fonts/font = ExtResource( 9 )
 text = "Edgewear"
 align = 1
 
 [node name="EdgewearExaplanationText" type="Label" parent="TabContainer/Damage & Edgewear"]
-margin_left = 73.4129
-margin_top = 376.735
-margin_right = 430.413
-margin_bottom = 445.735
+margin_left = 137.0
+margin_top = 623.0
+margin_right = 721.0
+margin_bottom = 728.0
 rect_rotation = -89.7973
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_fonts/font = ExtResource( 4 )
-text = "Loss    of    material
-along    the    edge
-of    the    card"
+text = "Loss    of    material    along    the    
+edge    of    the    card"
 align = 1
 
 [node name="CardFront" type="Sprite" parent="TabContainer/Damage & Edgewear"]
-position = Vector2( 325.713, 193.507 )
+position = Vector2( 507, 321 )
 rotation = -1.57152
-scale = Vector2( 0.287513, 0.315515 )
+scale = Vector2( 0.6, 0.6 )
 texture = ExtResource( 12 )
 
 [node name="Bee" type="Sprite" parent="TabContainer/Damage & Edgewear/CardFront"]
@@ -334,9 +354,9 @@ scale = Vector2( 1.15873, 3.52576 )
 texture = ExtResource( 13 )
 
 [node name="CardFront2" type="Sprite" parent="TabContainer/Damage & Edgewear"]
-position = Vector2( 323.074, 575.019 )
+position = Vector2( 507, 928 )
 rotation = -1.57152
-scale = Vector2( 0.282708, 0.324048 )
+scale = Vector2( 0.6, 0.6 )
 texture = ExtResource( 12 )
 
 [node name="Bee" type="Sprite" parent="TabContainer/Damage & Edgewear/CardFront2"]
@@ -376,64 +396,61 @@ margin_right = -4.0
 margin_bottom = -4.0
 
 [node name="BlankPages" type="Sprite" parent="TabContainer/Grime & Miscut"]
-position = Vector2( 251.851, 389.73 )
-rotation = -1.57292
-scale = Vector2( 0.491918, 0.505755 )
+position = Vector2( 428, 642 )
+rotation = -1.5708
+scale = Vector2( 0.8, 0.8 )
 texture = ExtResource( 1 )
 
 [node name="GrimeText" type="Label" parent="TabContainer/Grime & Miscut"]
-margin_left = 17.7264
-margin_top = 756.93
-margin_right = 376.726
-margin_bottom = 821.93
-rect_rotation = -89.7973
+margin_left = 56.0
+margin_top = 1239.0
+margin_right = 640.0
+margin_bottom = 1304.0
+rect_rotation = -90.0
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_fonts/font = ExtResource( 9 )
 text = "Grime"
 align = 1
 
 [node name="GrimeExplanationText" type="Label" parent="TabContainer/Grime & Miscut"]
-margin_left = 75.7261
-margin_top = 756.729
-margin_right = 433.726
-margin_bottom = 861.729
-rect_rotation = -89.7973
+margin_left = 137.0
+margin_top = 1239.0
+margin_right = 721.0
+margin_bottom = 1344.0
+rect_rotation = -90.0
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_fonts/font = ExtResource( 4 )
-text = "Material    on    the    card
-from    handling,    use
-or    poor    storage"
+text = "Material    on    the    card    from    
+handling,    use    or    poor    storage"
 align = 1
 
 [node name="MiscutText" type="Label" parent="TabContainer/Grime & Miscut"]
-margin_left = 17.0
-margin_top = 380.0
-margin_right = 376.0
-margin_bottom = 445.0
-rect_rotation = -89.7973
+margin_left = 56.0
+margin_top = 623.0
+margin_right = 640.0
+margin_bottom = 688.0
+rect_rotation = -90.0
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_fonts/font = ExtResource( 9 )
 text = "Miscut"
 align = 1
 
 [node name="MiscutExaplanationText" type="Label" parent="TabContainer/Grime & Miscut"]
-margin_left = 73.4129
-margin_top = 376.735
-margin_right = 430.413
-margin_bottom = 445.735
+margin_left = 137.0
+margin_top = 623.0
+margin_right = 721.0
+margin_bottom = 764.0
 rect_rotation = -89.7973
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_fonts/font = ExtResource( 4 )
-text = "The    card    was
-printed    incorrectly
-the    back    image
-is    offcenter"
+text = "The    card    was    printed    incorrectly
+the    back    image    is    offcenter"
 align = 1
 
 [node name="CardFront2" type="Sprite" parent="TabContainer/Grime & Miscut"]
-position = Vector2( 335.943, 567.795 )
+position = Vector2( 507, 928 )
 rotation = -1.57152
-scale = Vector2( 0.255161, 0.295105 )
+scale = Vector2( 0.6, 0.6 )
 texture = ExtResource( 12 )
 
 [node name="Bee" type="Sprite" parent="TabContainer/Grime & Miscut/CardFront2"]
@@ -464,9 +481,9 @@ position = Vector2( -222.469, -48.4766 )
 texture = ExtResource( 15 )
 
 [node name="Miscut" type="Sprite" parent="TabContainer/Grime & Miscut"]
-position = Vector2( 348.68, 191.603 )
-rotation = -1.56726
-scale = Vector2( 0.230437, 0.271 )
+position = Vector2( 507, 330 )
+rotation = -1.5708
+scale = Vector2( 0.6, 0.6 )
 texture = ExtResource( 16 )
 
 [node name="Scratch & Scribbling" type="Tabs" parent="TabContainer"]
@@ -479,40 +496,39 @@ margin_right = -4.0
 margin_bottom = -4.0
 
 [node name="BlankPages" type="Sprite" parent="TabContainer/Scratch & Scribbling"]
-position = Vector2( 251.851, 389.73 )
-rotation = -1.57292
-scale = Vector2( 0.491918, 0.505755 )
+position = Vector2( 428, 642 )
+rotation = -1.5708
+scale = Vector2( 0.8, 0.8 )
 texture = ExtResource( 1 )
 
 [node name="ScratchText" type="Label" parent="TabContainer/Scratch & Scribbling"]
-margin_left = 17.7264
-margin_top = 756.93
-margin_right = 376.726
-margin_bottom = 821.93
-rect_rotation = -89.7973
+margin_left = 56.0
+margin_top = 1239.0
+margin_right = 640.0
+margin_bottom = 1304.0
+rect_rotation = -90.0
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_fonts/font = ExtResource( 9 )
 text = "Scratch"
 align = 1
 
 [node name="ScratchExplanationText" type="Label" parent="TabContainer/Scratch & Scribbling"]
-margin_left = 75.7261
-margin_top = 756.729
-margin_right = 433.726
-margin_bottom = 861.729
+margin_left = 137.0
+margin_top = 1239.0
+margin_right = 721.0
+margin_bottom = 1344.0
 rect_rotation = -89.7973
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_fonts/font = ExtResource( 4 )
-text = "A    break    score 
-or     mark
+text = "A    break    score     or     mark
 on    the    card    surface"
 align = 1
 
 [node name="ScribblingText" type="Label" parent="TabContainer/Scratch & Scribbling"]
-margin_left = 17.0
-margin_top = 380.0
-margin_right = 376.0
-margin_bottom = 445.0
+margin_left = 56.0
+margin_top = 623.0
+margin_right = 640.0
+margin_bottom = 688.0
 rect_rotation = -89.7973
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_fonts/font = ExtResource( 9 )
@@ -520,10 +536,10 @@ text = "Scribbling"
 align = 1
 
 [node name="ScribblingExaplanationText" type="Label" parent="TabContainer/Scratch & Scribbling"]
-margin_left = 73.4129
-margin_top = 376.735
-margin_right = 430.413
-margin_bottom = 445.735
+margin_left = 137.0
+margin_top = 623.0
+margin_right = 721.0
+margin_bottom = 688.0
 rect_rotation = -89.7973
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_fonts/font = ExtResource( 4 )
@@ -531,9 +547,9 @@ text = "Writing    on    the    card"
 align = 1
 
 [node name="CardFront2" type="Sprite" parent="TabContainer/Scratch & Scribbling"]
-position = Vector2( 335.943, 567.795 )
+position = Vector2( 507, 928 )
 rotation = -1.57152
-scale = Vector2( 0.255161, 0.295105 )
+scale = Vector2( 0.6, 0.6 )
 texture = ExtResource( 12 )
 
 [node name="Bee" type="Sprite" parent="TabContainer/Scratch & Scribbling/CardFront2"]
@@ -565,9 +581,9 @@ scale = Vector2( 1.79118, 2.09381 )
 texture = ExtResource( 18 )
 
 [node name="CardFront3" type="Sprite" parent="TabContainer/Scratch & Scribbling"]
-position = Vector2( 336.895, 189.105 )
+position = Vector2( 507, 321 )
 rotation = -1.57152
-scale = Vector2( 0.255161, 0.295105 )
+scale = Vector2( 0.6, 0.6 )
 texture = ExtResource( 12 )
 
 [node name="Bee" type="Sprite" parent="TabContainer/Scratch & Scribbling/CardFront3"]
@@ -608,27 +624,27 @@ margin_right = -4.0
 margin_bottom = -4.0
 
 [node name="BlankPages" type="Sprite" parent="TabContainer/Conditions"]
-position = Vector2( 251.851, 389.73 )
-rotation = -1.57292
-scale = Vector2( 0.491918, 0.505755 )
+position = Vector2( 428, 642 )
+rotation = -1.5708
+scale = Vector2( 0.8, 0.8 )
 texture = ExtResource( 1 )
 
 [node name="ConditionsText" type="Label" parent="TabContainer/Conditions"]
-margin_left = 20.4202
-margin_top = 378.926
-margin_right = 379.42
-margin_bottom = 443.926
-rect_rotation = -89.7973
+margin_left = 56.0
+margin_top = 623.0
+margin_right = 640.0
+margin_bottom = 688.0
+rect_rotation = -90.0
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_fonts/font = ExtResource( 9 )
 text = "Conditions"
 align = 1
 
 [node name="ConditionsExplanationText" type="Label" parent="TabContainer/Conditions"]
-margin_left = 78.4199
-margin_top = 378.725
-margin_right = 440.42
-margin_bottom = 663.725
+margin_left = 250.0
+margin_top = 623.0
+margin_right = 834.0
+margin_bottom = 973.0
 rect_rotation = -89.7973
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_fonts/font = ExtResource( 4 )
@@ -652,66 +668,51 @@ margin_right = -4.0
 margin_bottom = -4.0
 
 [node name="BlankPages" type="Sprite" parent="TabContainer/Near Mint"]
-position = Vector2( 251.851, 389.73 )
-rotation = -1.57292
-scale = Vector2( 0.491918, 0.505755 )
+position = Vector2( 428, 642 )
+rotation = -1.5708
+scale = Vector2( 0.8, 0.8 )
 texture = ExtResource( 1 )
 
 [node name="NMText" type="Label" parent="TabContainer/Near Mint"]
-margin_left = 9.0
-margin_top = 757.0
-margin_right = 746.0
-margin_bottom = 822.0
-rect_rotation = -89.7973
+margin_left = 56.0
+margin_top = 1239.0
+margin_right = 640.0
+margin_bottom = 1304.0
+rect_rotation = -90.0
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_fonts/font = ExtResource( 9 )
-text = "Near             Mint"
+text = "Near    Mint"
 align = 1
 
 [node name="NMExplanationText" type="Label" parent="TabContainer/Near Mint"]
-margin_left = 62.0
-margin_top = 759.0
-margin_right = 423.0
-margin_bottom = 828.0
+margin_left = 137.0
+margin_top = 1239.0
+margin_right = 721.0
+margin_bottom = 1704.0
 rect_rotation = -89.7973
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_fonts/font = ExtResource( 4 )
 text = "A    card   with   minimal
-handling   or    wear"
-align = 1
+handling   or    wear
 
-[node name="NMAllowedText" type="Label" parent="TabContainer/Near Mint"]
-margin_left = 152.719
-margin_top = 754.463
-margin_right = 513.719
-margin_bottom = 859.463
-rect_rotation = -89.7973
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-custom_fonts/font = ExtResource( 4 )
-text = "2     Points   allowed
+
+2     Points   allowed
 Edgewear
-Scratch"
+Scratch
 
-[node name="NMExcludeText" type="Label" parent="TabContainer/Near Mint"]
-margin_left = 249.742
-margin_top = 761.128
-margin_right = 610.742
-margin_bottom = 974.128
-rect_rotation = -89.7973
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-custom_fonts/font = ExtResource( 4 )
-text = "Not Allowed 
+
+Not Allowed 
 Bend 
 damage 
 grime 
 miscut 
 scribbling "
-align = 2
+align = 1
 
 [node name="CardFront" type="Sprite" parent="TabContainer/Near Mint"]
-position = Vector2( 252.261, 193.151 )
+position = Vector2( 415, 315 )
 rotation = -1.57152
-scale = Vector2( 0.287513, 0.315515 )
+scale = Vector2( 0.6, 0.6 )
 texture = ExtResource( 12 )
 
 [node name="Bee" type="Sprite" parent="TabContainer/Near Mint/CardFront"]
@@ -738,7 +739,8 @@ scale = Vector2( 0.398923, 1.09553 )
 texture = ExtResource( 8 )
 
 [node name="EdgeWearLeft" type="Sprite" parent="TabContainer/Near Mint/CardFront"]
-position = Vector2( -387.994, -230.187 )
+position = Vector2( -378.692, 6.68962 )
+scale = Vector2( 1.93023, 3.5688 )
 texture = ExtResource( 13 )
 
 [node name="ScratchSwNe" type="Sprite" parent="TabContainer/Near Mint/CardFront"]
@@ -756,66 +758,51 @@ margin_right = -4.0
 margin_bottom = -4.0
 
 [node name="BlankPages" type="Sprite" parent="TabContainer/Lightly Played"]
-position = Vector2( 251.851, 389.73 )
-rotation = -1.57292
-scale = Vector2( 0.491918, 0.505755 )
+position = Vector2( 428, 642 )
+rotation = -1.5708
+scale = Vector2( 0.8, 0.8 )
 texture = ExtResource( 1 )
 
 [node name="LPText" type="Label" parent="TabContainer/Lightly Played"]
-margin_left = 9.0
-margin_top = 757.0
-margin_right = 747.0
-margin_bottom = 822.0
+margin_left = 56.0
+margin_top = 1239.0
+margin_right = 640.0
+margin_bottom = 1304.0
 rect_rotation = -89.7973
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_fonts/font = ExtResource( 9 )
-text = "Lightly            Played"
+text = "Lightly     Played"
 align = 1
 
 [node name="LPExplanationText" type="Label" parent="TabContainer/Lightly Played"]
-margin_left = 67.7261
-margin_top = 756.757
-margin_right = 428.726
-margin_bottom = 825.757
-rect_rotation = -89.7973
+margin_left = 137.0
+margin_top = 1239.0
+margin_right = 721.0
+margin_bottom = 1776.0
+rect_rotation = -90.0
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_fonts/font = ExtResource( 4 )
-text = "some handling
-nothing significant"
-align = 1
+text = "some     handling
+nothing     significant
 
-[node name="LPAllowedText" type="Label" parent="TabContainer/Lightly Played"]
-margin_left = 151.719
-margin_top = 754.467
-margin_right = 512.719
-margin_bottom = 931.467
-rect_rotation = -89.7973
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-custom_fonts/font = ExtResource( 4 )
-text = "4     Points   allowed
+
+4     Points   allowed
 Bend
 Edgewear
 Grime
-Scratch"
+Scratch
 
-[node name="LPExcludeText" type="Label" parent="TabContainer/Lightly Played"]
-margin_left = 336.196
-margin_top = 602.828
-margin_right = 538.196
-margin_bottom = 743.828
-rect_rotation = -89.7973
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-custom_fonts/font = ExtResource( 4 )
-text = "Not Allowed 
+
+Not Allowed 
 damage 
 miscut 
 scribbling "
-align = 2
+align = 1
 
 [node name="CardFront" type="Sprite" parent="TabContainer/Lightly Played"]
-position = Vector2( 265.416, 189.464 )
+position = Vector2( 415, 315 )
 rotation = -1.57152
-scale = Vector2( 0.287513, 0.315515 )
+scale = Vector2( 0.6, 0.6 )
 texture = ExtResource( 12 )
 
 [node name="Bee" type="Sprite" parent="TabContainer/Lightly Played/CardFront"]
@@ -867,66 +854,51 @@ margin_right = -4.0
 margin_bottom = -4.0
 
 [node name="BlankPages" type="Sprite" parent="TabContainer/Moderately Played"]
-position = Vector2( 251.851, 389.73 )
-rotation = -1.57292
-scale = Vector2( 0.491918, 0.505755 )
+position = Vector2( 428, 642 )
+rotation = -1.5708
+scale = Vector2( 0.8, 0.8 )
 texture = ExtResource( 1 )
 
 [node name="MPText" type="Label" parent="TabContainer/Moderately Played"]
-margin_left = 9.0
-margin_top = 757.0
-margin_right = 668.0
-margin_bottom = 822.0
-rect_rotation = -89.7973
+margin_left = 56.0
+margin_top = 1239.0
+margin_right = 640.0
+margin_bottom = 1304.0
+rect_rotation = -90.0
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_fonts/font = ExtResource( 9 )
-text = "Moderately           Played"
+text = "Moderately  Played"
 align = 1
 
 [node name="MPExplanationText" type="Label" parent="TabContainer/Moderately Played"]
-margin_left = 67.7261
-margin_top = 756.757
-margin_right = 428.726
-margin_bottom = 825.757
-rect_rotation = -89.7973
+margin_left = 137.0
+margin_top = 1239.0
+margin_right = 721.0
+margin_bottom = 1776.0
+rect_rotation = -90.0
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_fonts/font = ExtResource( 4 )
 text = "significant    play
-use   and    wear"
-align = 1
+use   and    wear
 
-[node name="MPAllowedText" type="Label" parent="TabContainer/Moderately Played"]
-margin_left = 151.719
-margin_top = 754.467
-margin_right = 512.719
-margin_bottom = 931.467
-rect_rotation = -89.7973
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-custom_fonts/font = ExtResource( 4 )
-text = "6     Points   allowed
+
+6     Points   allowed
 Bend
 Edgewear
 Grime
-Scratch"
+Scratch
 
-[node name="MPExcludeText" type="Label" parent="TabContainer/Moderately Played"]
-margin_left = 336.196
-margin_top = 602.828
-margin_right = 538.196
-margin_bottom = 743.828
-rect_rotation = -89.7973
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-custom_fonts/font = ExtResource( 4 )
-text = "Not Allowed 
+
+Not Allowed 
 damage 
 miscut 
 scribbling "
-align = 2
+align = 1
 
 [node name="CardFront" type="Sprite" parent="TabContainer/Moderately Played"]
-position = Vector2( 265.416, 189.464 )
+position = Vector2( 415, 315 )
 rotation = -1.57152
-scale = Vector2( 0.287513, 0.315515 )
+scale = Vector2( 0.6, 0.6 )
 texture = ExtResource( 12 )
 
 [node name="Bee" type="Sprite" parent="TabContainer/Moderately Played/CardFront"]
@@ -986,66 +958,51 @@ margin_right = -4.0
 margin_bottom = -4.0
 
 [node name="BlankPages" type="Sprite" parent="TabContainer/Heavily Played"]
-position = Vector2( 251.851, 389.73 )
-rotation = -1.57292
-scale = Vector2( 0.491918, 0.505755 )
+position = Vector2( 428, 642 )
+rotation = -1.5708
+scale = Vector2( 0.8, 0.8 )
 texture = ExtResource( 1 )
 
 [node name="HPText" type="Label" parent="TabContainer/Heavily Played"]
-margin_left = 9.0
-margin_top = 757.0
-margin_right = 741.0
-margin_bottom = 822.0
-rect_rotation = -89.7973
+margin_left = 56.0
+margin_top = 1239.0
+margin_right = 655.0
+margin_bottom = 1304.0
+rect_rotation = -90.0
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_fonts/font = ExtResource( 9 )
-text = "Heavily                  Played"
+text = "Heavily       Played"
 align = 1
 
 [node name="HPExplanationText" type="Label" parent="TabContainer/Heavily Played"]
-margin_left = 67.7261
-margin_top = 756.757
-margin_right = 428.726
-margin_bottom = 825.757
-rect_rotation = -89.7973
+margin_left = 137.0
+margin_top = 1239.0
+margin_right = 721.0
+margin_bottom = 1776.0
+rect_rotation = -90.0
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_fonts/font = ExtResource( 4 )
 text = "significant    damage
-and    imperfections"
-align = 1
+and    imperfections
 
-[node name="HPAllowedText" type="Label" parent="TabContainer/Heavily Played"]
-margin_left = 151.719
-margin_top = 754.467
-margin_right = 512.719
-margin_bottom = 931.467
-rect_rotation = -89.7973
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-custom_fonts/font = ExtResource( 4 )
-text = "8     Points   allowed
+
+8     Points   allowed
 Bend
 Edgewear
 Grime
-Scratch"
+Scratch
 
-[node name="HPExcludeText" type="Label" parent="TabContainer/Heavily Played"]
-margin_left = 336.196
-margin_top = 602.828
-margin_right = 538.196
-margin_bottom = 743.828
-rect_rotation = -89.7973
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-custom_fonts/font = ExtResource( 4 )
-text = "Not Allowed 
+
+Not Allowed 
 damage 
 miscut 
 scribbling "
-align = 2
+align = 1
 
 [node name="CardFront" type="Sprite" parent="TabContainer/Heavily Played"]
-position = Vector2( 265.416, 189.464 )
+position = Vector2( 415, 315 )
 rotation = -1.57152
-scale = Vector2( 0.287513, 0.315515 )
+scale = Vector2( 0.6, 0.6 )
 texture = ExtResource( 12 )
 
 [node name="Bee" type="Sprite" parent="TabContainer/Heavily Played/CardFront"]
@@ -1113,62 +1070,47 @@ margin_right = -4.0
 margin_bottom = -4.0
 
 [node name="BlankPages" type="Sprite" parent="TabContainer/Damaged"]
-position = Vector2( 251.851, 389.73 )
-rotation = -1.57292
-scale = Vector2( 0.491918, 0.505755 )
+position = Vector2( 428, 642 )
+rotation = -1.5708
+scale = Vector2( 0.8, 0.8 )
 texture = ExtResource( 1 )
 
 [node name="DMGText" type="Label" parent="TabContainer/Damaged"]
-margin_left = 9.0
-margin_top = 757.0
-margin_right = 371.0
-margin_bottom = 822.0
-rect_rotation = -89.7973
+margin_left = 56.0
+margin_top = 1239.0
+margin_right = 640.0
+margin_bottom = 1304.0
+rect_rotation = -90.0
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_fonts/font = ExtResource( 9 )
 text = "Damaged"
 align = 1
 
 [node name="DMGExplanationText" type="Label" parent="TabContainer/Damaged"]
-margin_left = 67.7261
-margin_top = 756.757
-margin_right = 428.726
-margin_bottom = 825.757
-rect_rotation = -89.7973
+margin_left = 137.0
+margin_top = 1239.0
+margin_right = 721.0
+margin_bottom = 1632.0
+rect_rotation = -90.0
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_fonts/font = ExtResource( 4 )
 text = "Imperfections    Beyond
-the    Standard"
+the    Standard
+
+
+Auto  Damaged
+Damage
+Scribbling
+
+
+Not Included
+Miscut"
 align = 1
 
-[node name="DMGAllowedText" type="Label" parent="TabContainer/Damaged"]
-margin_left = 180.719
-margin_top = 754.366
-margin_right = 556.719
-margin_bottom = 931.366
-rect_rotation = -89.7973
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-custom_fonts/font = ExtResource( 4 )
-text = "Auto  Damaged
-Damage
-Scribbling"
-
-[node name="DMGExcludeText" type="Label" parent="TabContainer/Damaged"]
-margin_left = 336.196
-margin_top = 602.828
-margin_right = 538.196
-margin_bottom = 743.828
-rect_rotation = -89.7973
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-custom_fonts/font = ExtResource( 4 )
-text = "Not Included
-Miscut"
-align = 2
-
 [node name="CardFront" type="Sprite" parent="TabContainer/Damaged"]
-position = Vector2( 265.416, 189.464 )
+position = Vector2( 415, 315 )
 rotation = -1.57152
-scale = Vector2( 0.287513, 0.315515 )
+scale = Vector2( 0.6, 0.6 )
 texture = ExtResource( 12 )
 
 [node name="Bee" type="Sprite" parent="TabContainer/Damaged/CardFront"]
@@ -1244,50 +1186,41 @@ margin_right = -4.0
 margin_bottom = -4.0
 
 [node name="BlankPages" type="Sprite" parent="TabContainer/Defect"]
-position = Vector2( 251.851, 389.73 )
-rotation = -1.57292
-scale = Vector2( 0.491918, 0.505755 )
+position = Vector2( 428, 642 )
+rotation = -1.5708
+scale = Vector2( 0.8, 0.8 )
 texture = ExtResource( 1 )
 
 [node name="DefectText" type="Label" parent="TabContainer/Defect"]
-margin_left = 17.0
-margin_top = 757.0
-margin_right = 378.0
-margin_bottom = 822.0
-rect_rotation = -89.7973
+margin_left = 56.0
+margin_top = 1239.0
+margin_right = 640.0
+margin_bottom = 1304.0
+rect_rotation = -90.0
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_fonts/font = ExtResource( 9 )
 text = "Defect"
 align = 1
 
 [node name="DefectExplanationText" type="Label" parent="TabContainer/Defect"]
-margin_left = 77.0
-margin_top = 757.0
-margin_right = 435.0
-margin_bottom = 826.0
-rect_rotation = -89.7973
+margin_left = 137.0
+margin_top = 1239.0
+margin_right = 721.0
+margin_bottom = 1416.0
+rect_rotation = -90.0
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_fonts/font = ExtResource( 4 )
 text = "Errors     Made
-During    Manufacturing"
-align = 1
+During    Manufacturing
 
-[node name="DefectAllowedText" type="Label" parent="TabContainer/Defect"]
-margin_left = 181.0
-margin_top = 754.0
-margin_right = 537.0
-margin_bottom = 931.0
-rect_rotation = -89.7973
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-custom_fonts/font = ExtResource( 4 )
-text = "Auto  Defect
+Auto  Defect
 Miscut"
 align = 1
 
 [node name="Miscut" type="Sprite" parent="TabContainer/Defect"]
-position = Vector2( 225.457, 186.39 )
-rotation = -1.57425
-scale = Vector2( 0.313789, 0.34974 )
+position = Vector2( 415, 330 )
+rotation = -1.5708
+scale = Vector2( 0.6, 0.6 )
 texture = ExtResource( 16 )
 
 [connection signal="pressed" from="CloseButton" to="." method="_on_CloseButton_pressed"]
