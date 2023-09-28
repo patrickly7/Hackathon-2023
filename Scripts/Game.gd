@@ -197,7 +197,7 @@ func generateCardImperfections():
 	var numBends = rng.randi_range(0, 2) # 0 - 2 bends
 	
 	var totalImperfections = numScratches + numSmudges + numWears + numBends
-	if (totalImperfections <= 2):
+	if (totalImperfections <= 2 and numBends == 0 and numSmudges == 0):
 		currentCorrectCondition = "Near Mint"
 	elif (totalImperfections <= 4):
 		currentCorrectCondition = "Lightly Played"
